@@ -1,0 +1,1638 @@
+#SYMBOLS
+Index	Identifier	Type	Flag	Data	Size	RefCount
+0	__D0wander	6	1	0	4	43
+1	__D0SetSensorLight_inline_main	6	1	4	4	6
+2	__D0stateMachine	6	1	8	4	39
+3	__D0turnLine	6	1	12	4	23
+4	__DU0SetSensorLowspeed_inline_main	5	1	16	4	2
+5	__D0SetSensorLowspeed_inline_SetSensorUltrasonic	6	1	20	4	3
+6	__DU0SetSensorLight_inline_main	5	1	24	4	4
+7	__D0SetSensorLowspeed_inline_main	6	1	28	4	3
+8	__D0filterLightData	6	1	32	4	8
+9	__D0followLine	6	1	36	4	12
+10	__SPTArgsMutex	9	0	40	4	2
+11	__D0escapeLine	6	1	44	4	20
+12	__D0objectApproach	6	1	48	4	8
+13	__D0objectEscape	6	1	52	4	6
+14	__D0getLightData	6	1	56	4	6
+15	__D0getSonarData	6	1	60	4	6
+16	__DU0SetSensorLowspeed_inline_SetSensorUltrasonic	5	1	64	4	2
+17	__signed_stack_001stateMachine	6	1	68	4	8
+18	__signed_stack_001turnLine	6	1	72	4	10
+19	__signed_stack_001objectApproach	6	1	76	4	16
+20	__signed_stack_001objectEscape	6	1	80	4	4
+21	__signed_stack_002wander	6	1	84	4	4
+22	__constVal65536	6	0	88	4	6
+23	__signed_stack_002turnLine	6	1	92	4	4
+24	__signed_stack_001wander	6	1	96	4	18
+25	__signed_stack_003escapeLine	6	1	100	4	2
+26	__signed_stack_001filterLightData	6	1	104	4	6
+27	__signed_stack_001escapeLine	6	1	108	4	12
+28	__signed_stack_002escapeLine	6	1	112	4	4
+29	__signed_stack_001getSonarData	6	1	116	4	2
+30	__signed_stack_002getSonarData	6	1	120	4	2
+31	__signed_stack_001followLine	6	1	124	4	8
+32	__signed_stack_001getLightData	6	1	128	4	6
+33	__constVal32768	6	0	132	4	6
+34	__OnRevMutex	9	0	136	4	12
+35	__RandomTmp	5	1	140	4	42
+36	__RandomMutex	9	0	144	4	12
+37	__CLSCSMutex2	9	0	148	4	2
+38	__CLSRMutex2	9	0	152	4	2
+39	__RLSBmutex2	9	0	156	4	2
+40	__CLSWMutex2	9	0	160	4	2
+41	leftValue	4	1	164	2	5
+42	dir	4	1	166	2	9
+43	rightValue	4	1	168	2	5
+44	wndr_cnt	4	1	170	2	4
+45	motor_A	4	1	172	2	12
+46	state	4	1	174	2	14
+47	kp	4	1	176	2	5
+48	motor_C	4	1	178	2	12
+49	__filterLightData_7qG2_sum_7qG2_000	4	1	180	2	4
+50	__filterLightData_7qG2_i_7qG2_000	4	1	182	2	3
+51	__filterLightData_7qG2_weight_7qG2_000	4	1	184	2	4
+52	__constVal150	4	0	186	2	1
+53	__getLightData_7qG2_index_7qG2_000	4	1	188	2	7
+54	__filterLightData_7qG2_counter_7qG2_000	4	1	190	2	4
+55	__filterLightData_7qG2_index_7qG2_000	4	1	192	2	4
+56	mot	4	1	194	2	13
+57	coefficient	4	1	196	2	2
+58	distance	4	0	198	2	9
+59	reset_count	4	1	200	2	4
+60	escape_time	4	1	202	2	8
+61	turn_time	4	1	204	2	19
+62	__ArrHelper__filterLightData_73_0	4	1	206	2	2
+63	__constVal7	2	0	208	1	5
+64	__zfescapeLine	1	1	209	1	16
+65	__constVal100	2	0	210	1	2
+66	__SetSensorLight_7qG2_bActive_7qG2_000_inline_main	1	1	211	1	4
+67	__SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main	1	1	212	1	4
+68	____initialize_global_data_return	1	1	213	1	3
+69	__SetSensorLight_7qG2_port_7qG2_000_inline_main	1	1	214	1	10
+70	__filterLightData_return	1	1	215	1	5
+71	__escapeLine_return	1	1	216	1	3
+72	__objectApproach_return	1	1	217	1	3
+73	__followLine_return	1	1	218	1	3
+74	__turnLine_return	1	1	219	1	3
+75	__objectEscape_return	1	1	220	1	3
+76	__constVal10	2	0	221	1	13
+77	__constVal96	2	0	222	1	11
+78	__constVal63	2	0	223	1	11
+79	__SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_main	1	1	224	1	4
+80	__SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_main	1	1	225	1	2
+81	__SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_main	1	1	226	1	2
+82	__SetSensorLowspeed_7qG2_port_7qG2_000_inline_main	1	1	227	1	4
+83	__SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_main	1	1	228	1	2
+84	__constVal30	2	0	229	1	4
+85	__constVal55	2	0	230	1	3
+86	__SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_main	1	1	231	1	2
+87	__SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_main	1	1	232	1	2
+88	__SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_main	1	1	233	1	2
+89	__ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main	1	1	234	1	2
+90	__SetSensorLowspeed_7qG2_port_7qG2_000_inline_SetSensorUltrasonic_inline_main	1	1	235	1	4
+91	__SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main	1	1	236	1	4
+92	__SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_main	1	1	237	1	4
+93	__SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_main	1	1	238	1	2
+94	__SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_main	1	1	239	1	2
+95	__SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_SetSensorUltrasonic_inline_main	1	1	240	1	2
+96	__SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_main	1	1	241	1	2
+97	__wander_return	1	1	242	1	3
+98	__constVal0	2	1	243	1	40
+99	__constVal1	2	0	244	1	16
+100	__constVal4	2	0	245	1	4
+101	__constVal3	2	0	246	1	11
+102	__OnRev_Tmp	2	1	247	1	12
+103	__zfturnLine	1	1	248	1	21
+104	__constVal32	2	0	249	1	33
+105	__RLSBResult2	2	1	250	1	7
+106	__constVal5	2	0	251	1	7
+107	__zfSetSensorLight_inline_main	1	1	252	1	4
+108	__zfSetSensorLowspeed_inline_SetSensorUltrasonic	1	1	253	1	2
+109	____ReadLSBytes2_return	1	1	254	1	3
+110	__zfSetSensorLowspeed_inline_main	1	1	255	1	2
+111	__ResetSensorTmp	1	1	256	1	2
+112	__ResetSensorPort	1	1	257	1	6
+113	__zfwander	1	1	258	1	21
+114	____ResetSensorSubroutine_return	1	1	259	1	6
+115	__zfgetSonarData	1	1	260	1	2
+116	__constVal2	2	0	261	1	8
+117	__zfobjectApproach	1	1	262	1	6
+118	__zffilterLightData	1	1	263	1	3
+119	__zffollowLine	1	1	264	1	12
+120	__zfgetLightData	1	1	265	1	2
+121	__zfobjectEscape	1	1	266	1	6
+122	__RLSBIterations2	1	1	267	1	4
+123	__zfstateMachine	1	1	268	1	2
+124	__RLSBytesCount2	1	1	269	1	7
+125	__CLSWArgs2	8	0	4	12	5
+126	__CLSWArgs2.Result	2	1	272	1	5
+127	__CLSWArgs2.Port	1	1	273	1	5
+128	__CLSWArgs2.Buffer	7	0	274	4	5
+129	__CLSWArgs2.Buffer.Buffer_type	1	0	0	1	0
+130	__CLSWArgs2.ReturnLen	1	1	276	1	5
+131	__SPFArgs	8	0	4	12	4
+132	__SPFArgs.Result	2	1	280	1	4
+133	__SPFArgs.Filename	7	0	282	4	4
+134	__SPFArgs.Filename.Filename_type	1	0	0	1	0
+135	__SPFArgs.Loop	1	1	284	1	4
+136	__SPFArgs.Volume	1	1	285	1	4
+137	__RandomArgs	8	0	1	4	18
+138	__RandomArgs.Result	4	1	288	2	18
+139	__CLSRArgs2	8	0	4	12	5
+140	__CLSRArgs2.Result	2	1	292	1	5
+141	__CLSRArgs2.Port	1	1	293	1	5
+142	__CLSRArgs2.Buffer	7	0	294	4	5
+143	__CLSRArgs2.Buffer.Buffer_type	1	0	0	1	0
+144	__CLSRArgs2.BufferLen	1	1	296	1	5
+145	__CLSCSArgs2	8	0	3	4	4
+146	__CLSCSArgs2.Result	2	1	300	1	4
+147	__CLSCSArgs2.Port	1	1	301	1	4
+148	__CLSCSArgs2.BytesReady	1	1	302	1	4
+149	__SPTArgs	8	0	5	8	6
+150	__SPTArgs.Result	2	1	304	1	6
+151	__SPTArgs.Frequency	3	1	306	2	6
+152	__SPTArgs.Duration	3	1	308	2	6
+153	__SPTArgs.Loop	1	1	310	1	6
+154	__SPTArgs.Volume	1	1	311	1	6
+155	__getLightData_7qG2_dataRight_7qG2_000	7	0	312	4	4
+156	__getLightData_7qG2_dataRight_7qG2_000.__getLightData_7qG2_dataRight_7qG2_000_type	4	0	0	2	0
+157	__OUT_AC	7	0	314	4	1
+158	__OUT_AC.__OUT_AC_type	1	0	0	1	0
+159	__RLSBbufLSWrite1	7	0	316	4	1
+160	__RLSBbufLSWrite1.__RLSBbufLSWrite1_type	1	0	0	1	0
+161	__filterLightData_7qG2_data_7qG2_000	7	0	318	4	3
+162	__filterLightData_7qG2_data_7qG2_000.__filterLightData_7qG2_data_7qG2_000_type	4	0	0	2	0
+163	__strbufobjectApproach	7	0	320	4	2
+164	__strbufobjectApproach.__strbufobjectApproach_type	1	0	0	1	0
+165	__RLSReadBuf2	7	0	322	4	8
+166	__RLSReadBuf2.__RLSReadBuf2_type	1	0	0	1	0
+167	__RLSLastGoodRead2	7	0	324	4	2
+168	__RLSLastGoodRead2.__RLSLastGoodRead2_type	1	0	0	1	0
+169	__getLightData_7qG2_dataLeft_7qG2_000	7	0	326	4	4
+170	__getLightData_7qG2_dataLeft_7qG2_000.__getLightData_7qG2_dataLeft_7qG2_000_type	4	0	0	2	0
+171	__constStr0009	7	0	328	4	1
+172	__constStr0009.__constStr0009_type	1	1	0	1	0
+#SOURCES
+Clump	Line	PC	Source
+0	377	0	#line 377 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	378	0		subcall __initialize_global_data, ____initialize_global_data_return
+0	377	2	#line 377 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	377	2	#line 377 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	378	2		set __SetSensorLight_7qG2_port_7qG2_000_inline_main, 0
+0	377	5	#line 377 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	378	5	#line 378 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	379	5		mov __SetSensorLight_7qG2_bActive_7qG2_000_inline_main, __constVal1
+0	3729	7	#line 3729 "NXCDefs.h"
+0	3730	7		mov __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main, __SetSensorLight_7qG2_port_7qG2_000_inline_main
+0	3729	9	#line 3729 "NXCDefs.h"
+0	3729	9	#line 3729 "NXCDefs.h"
+0	3730	9		mov __DU0SetSensorLight_inline_main, __SetSensorLight_7qG2_bActive_7qG2_000_inline_main
+0	3729	11	#line 3729 "NXCDefs.h"
+0	3730	11		tst 5, __zfSetSensorLight_inline_main, __DU0SetSensorLight_inline_main
+0	3729	14	#line 3729 "NXCDefs.h"
+0	3730	14		brtst 4, __001__NXC_Label_4, __zfSetSensorLight_inline_main
+0	3729	17	#line 3729 "NXCDefs.h"
+0	3730	17		set __D0SetSensorLight_inline_main, 5
+0	3729	20	#line 3729 "NXCDefs.h"
+0	3730	20		jmp __001__NXC_Label_5
+0	3729	22	#line 3729 "NXCDefs.h"
+0	3730	22		set __D0SetSensorLight_inline_main, 6
+0	3729	25	#line 3729 "NXCDefs.h"
+0	3730	25		mov __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_main, __D0SetSensorLight_inline_main
+0	3663	27	#line 3663 "NXCDefs.h"
+0	3664	27		setin __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_main, __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main, 0
+0	3663	31	#line 3663 "NXCDefs.h"
+0	3730	31	#line 3730 "NXCDefs.h"
+0	3730	31	#line 3730 "NXCDefs.h"
+0	3731	31		mov __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main, __SetSensorLight_7qG2_port_7qG2_000_inline_main
+0	3730	33	#line 3730 "NXCDefs.h"
+0	3730	33	#line 3730 "NXCDefs.h"
+0	3731	33		set __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_main, 128
+0	3730	36	#line 3730 "NXCDefs.h"
+0	3676	36	#line 3676 "NXCDefs.h"
+0	3677	36		setin __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_main, __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main, 1
+0	3676	40	#line 3676 "NXCDefs.h"
+0	3731	40	#line 3731 "NXCDefs.h"
+0	3731	40	#line 3731 "NXCDefs.h"
+0	3732	40		mov __ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main, __SetSensorLight_7qG2_port_7qG2_000_inline_main
+0	3731	42	#line 3731 "NXCDefs.h"
+0	3694	42	#line 3694 "NXCDefs.h"
+0	3695	42	#pragma macro 4
+0	3695	42		mov __ResetSensorPort, __SetSensorLight_7qG2_port_7qG2_000_inline_main
+0	3695	44		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+0	8933	46	#line 8933 "NXCDefs.h"
+0	3694	46	#line 3694 "NXCDefs.h"
+0	3732	46	#line 3732 "NXCDefs.h"
+0	378	46	#line 378 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	378	46	#line 378 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	378	46	#line 378 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	3768	46	#line 3768 "NXCDefs.h"
+0	3769	46		mov __SetSensorLowspeed_7qG2_port_7qG2_000_inline_SetSensorUltrasonic_inline_main, __constVal2
+0	3768	48	#line 3768 "NXCDefs.h"
+0	3768	48	#line 3768 "NXCDefs.h"
+0	3769	48		mov __SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_SetSensorUltrasonic_inline_main, __constVal1
+0	3758	50	#line 3758 "NXCDefs.h"
+0	3759	50		mov __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_main, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_SetSensorUltrasonic_inline_main
+0	3758	52	#line 3758 "NXCDefs.h"
+0	3758	52	#line 3758 "NXCDefs.h"
+0	3759	52		mov __DU0SetSensorLowspeed_inline_SetSensorUltrasonic, __SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_SetSensorUltrasonic_inline_main
+0	3758	54	#line 3758 "NXCDefs.h"
+0	3759	54		tst 5, __zfSetSensorLowspeed_inline_SetSensorUltrasonic, __DU0SetSensorLowspeed_inline_SetSensorUltrasonic
+0	3758	57	#line 3758 "NXCDefs.h"
+0	3759	57		brtst 4, __001__001__NXC_Label_36, __zfSetSensorLowspeed_inline_SetSensorUltrasonic
+0	3758	60	#line 3758 "NXCDefs.h"
+0	3759	60		set __D0SetSensorLowspeed_inline_SetSensorUltrasonic, 11
+0	3758	63	#line 3758 "NXCDefs.h"
+0	3759	63		jmp __001__001__NXC_Label_37
+0	3758	65	#line 3758 "NXCDefs.h"
+0	3759	65		set __D0SetSensorLowspeed_inline_SetSensorUltrasonic, 10
+0	3758	68	#line 3758 "NXCDefs.h"
+0	3759	68		mov __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_main, __D0SetSensorLowspeed_inline_SetSensorUltrasonic
+0	3663	70	#line 3663 "NXCDefs.h"
+0	3664	70		setin __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_main, __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_main, 0
+0	3663	74	#line 3663 "NXCDefs.h"
+0	3759	74	#line 3759 "NXCDefs.h"
+0	3759	74	#line 3759 "NXCDefs.h"
+0	3760	74		mov __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_main, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_SetSensorUltrasonic_inline_main
+0	3759	76	#line 3759 "NXCDefs.h"
+0	3759	76	#line 3759 "NXCDefs.h"
+0	3760	76		set __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_main, 0
+0	3759	79	#line 3759 "NXCDefs.h"
+0	3676	79	#line 3676 "NXCDefs.h"
+0	3677	79		setin __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_main, __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_main, 1
+0	3676	83	#line 3676 "NXCDefs.h"
+0	3760	83	#line 3760 "NXCDefs.h"
+0	3760	83	#line 3760 "NXCDefs.h"
+0	3760	83	#line 3760 "NXCDefs.h"
+0	3694	83	#line 3694 "NXCDefs.h"
+0	3695	83	#pragma macro 4
+0	3695	83		mov __ResetSensorPort, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_SetSensorUltrasonic_inline_main
+0	3695	85		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+0	9038	87	#line 9038 "NXCDefs.h"
+0	3694	87	#line 3694 "NXCDefs.h"
+0	3761	87	#line 3761 "NXCDefs.h"
+0	3768	87	#line 3768 "NXCDefs.h"
+0	379	87	#line 379 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	379	87	#line 379 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	380	87		set __SetSensorLowspeed_7qG2_port_7qG2_000_inline_main, 2
+0	379	90	#line 379 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	380	90	#line 380 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	381	90		mov __SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_main, __constVal1
+0	3758	92	#line 3758 "NXCDefs.h"
+0	3759	92		mov __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_main, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_main
+0	3758	94	#line 3758 "NXCDefs.h"
+0	3758	94	#line 3758 "NXCDefs.h"
+0	3759	94		mov __DU0SetSensorLowspeed_inline_main, __SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_main
+0	3758	96	#line 3758 "NXCDefs.h"
+0	3759	96		tst 5, __zfSetSensorLowspeed_inline_main, __DU0SetSensorLowspeed_inline_main
+0	3758	99	#line 3758 "NXCDefs.h"
+0	3759	99		brtst 4, __004__NXC_Label_36, __zfSetSensorLowspeed_inline_main
+0	3758	102	#line 3758 "NXCDefs.h"
+0	3759	102		set __D0SetSensorLowspeed_inline_main, 11
+0	3758	105	#line 3758 "NXCDefs.h"
+0	3759	105		jmp __004__NXC_Label_37
+0	3758	107	#line 3758 "NXCDefs.h"
+0	3759	107		set __D0SetSensorLowspeed_inline_main, 10
+0	3758	110	#line 3758 "NXCDefs.h"
+0	3759	110		mov __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_main, __D0SetSensorLowspeed_inline_main
+0	3663	112	#line 3663 "NXCDefs.h"
+0	3664	112		setin __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_main, __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_main, 0
+0	3663	116	#line 3663 "NXCDefs.h"
+0	3759	116	#line 3759 "NXCDefs.h"
+0	3759	116	#line 3759 "NXCDefs.h"
+0	3760	116		mov __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_main, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_main
+0	3759	118	#line 3759 "NXCDefs.h"
+0	3759	118	#line 3759 "NXCDefs.h"
+0	3760	118		set __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_main, 0
+0	3759	121	#line 3759 "NXCDefs.h"
+0	3676	121	#line 3676 "NXCDefs.h"
+0	3677	121		setin __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_main, __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_main, 1
+0	3676	125	#line 3676 "NXCDefs.h"
+0	3760	125	#line 3760 "NXCDefs.h"
+0	3760	125	#line 3760 "NXCDefs.h"
+0	3760	125	#line 3760 "NXCDefs.h"
+0	3694	125	#line 3694 "NXCDefs.h"
+0	3695	125	#pragma macro 4
+0	3695	125		mov __ResetSensorPort, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_main
+0	3695	127		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+0	9134	129	#line 9134 "NXCDefs.h"
+0	3694	129	#line 3694 "NXCDefs.h"
+0	3761	129	#line 3761 "NXCDefs.h"
+0	380	129	#line 380 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	380	129	#line 380 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	381	129		set __SetSensorLight_7qG2_port_7qG2_000_inline_main, 3
+0	380	132	#line 380 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	383	132	#line 383 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	384	132		mov __SetSensorLight_7qG2_bActive_7qG2_000_inline_main, __constVal1
+0	3729	134	#line 3729 "NXCDefs.h"
+0	3730	134		mov __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main, __SetSensorLight_7qG2_port_7qG2_000_inline_main
+0	3729	136	#line 3729 "NXCDefs.h"
+0	3729	136	#line 3729 "NXCDefs.h"
+0	3730	136		mov __DU0SetSensorLight_inline_main, __SetSensorLight_7qG2_bActive_7qG2_000_inline_main
+0	3729	138	#line 3729 "NXCDefs.h"
+0	3730	138		tst 5, __zfSetSensorLight_inline_main, __DU0SetSensorLight_inline_main
+0	3729	141	#line 3729 "NXCDefs.h"
+0	3730	141		brtst 4, __002__NXC_Label_4, __zfSetSensorLight_inline_main
+0	3729	144	#line 3729 "NXCDefs.h"
+0	3730	144		set __D0SetSensorLight_inline_main, 5
+0	3729	147	#line 3729 "NXCDefs.h"
+0	3730	147		jmp __002__NXC_Label_5
+0	3729	149	#line 3729 "NXCDefs.h"
+0	3730	149		set __D0SetSensorLight_inline_main, 6
+0	3729	152	#line 3729 "NXCDefs.h"
+0	3730	152		mov __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_main, __D0SetSensorLight_inline_main
+0	3663	154	#line 3663 "NXCDefs.h"
+0	3664	154		setin __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_main, __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main, 0
+0	3663	158	#line 3663 "NXCDefs.h"
+0	3730	158	#line 3730 "NXCDefs.h"
+0	3730	158	#line 3730 "NXCDefs.h"
+0	3731	158		mov __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main, __SetSensorLight_7qG2_port_7qG2_000_inline_main
+0	3730	160	#line 3730 "NXCDefs.h"
+0	3730	160	#line 3730 "NXCDefs.h"
+0	3731	160		set __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_main, 128
+0	3730	163	#line 3730 "NXCDefs.h"
+0	3676	163	#line 3676 "NXCDefs.h"
+0	3677	163		setin __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_main, __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main, 1
+0	3676	167	#line 3676 "NXCDefs.h"
+0	3731	167	#line 3731 "NXCDefs.h"
+0	3731	167	#line 3731 "NXCDefs.h"
+0	3732	167		mov __ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLight_inline_main, __SetSensorLight_7qG2_port_7qG2_000_inline_main
+0	3731	169	#line 3731 "NXCDefs.h"
+0	3694	169	#line 3694 "NXCDefs.h"
+0	3695	169	#pragma macro 4
+0	3695	169		mov __ResetSensorPort, __SetSensorLight_7qG2_port_7qG2_000_inline_main
+0	3695	171		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+0	9201	173	#line 9201 "NXCDefs.h"
+0	3694	173	#line 3694 "NXCDefs.h"
+0	3732	173	#line 3732 "NXCDefs.h"
+0	383	173	#line 383 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	384	173	#line 384 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	384	173	#line 384 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	385	173		exit 0, 2
+1	4885	0		setin __constVal1, __ResetSensorPort, 5
+1	4887	4		getin __ResetSensorTmp, __ResetSensorPort, 5
+1	4888	8		brtst 5, __SensorStillInvalid, __ResetSensorTmp
+1	4889	11		subret ____ResetSensorSubroutine_return
+2	5747	0	#pragma macro 25
+2	5747	0		acquire __CLSWMutex2
+2	5747	1		set __CLSWArgs2.Port, 2
+2	5747	4		mov __CLSWArgs2.ReturnLen, __RLSBytesCount2
+2	5747	6		mov __CLSWArgs2.Buffer, __RLSReadBuf2
+2	5747	8		syscall 21, __CLSWArgs2
+2	5747	11		mov __RLSBResult2, __CLSWArgs2.Result
+2	5747	13		release __CLSWMutex2
+2	5747	14	#line 5747 "NXTDefs.h"
+2	5748	14		brtst 4, __RLSBReturn2, __RLSBytesCount2
+2	5749	17		arrinit __RLSReadBuf2, __constVal0, __RLSBytesCount2
+2	5750	21		brtst 5, __RLSBError2, __RLSBResult2
+2	5751	24		set __RLSBIterations2, 4
+2	5753	27	#pragma macro 23
+2	5753	27		acquire __CLSCSMutex2
+2	5753	28		set __CLSCSArgs2.Port, 2
+2	5753	31		syscall 23, __CLSCSArgs2
+2	5753	34		mov __RLSBytesCount2, __CLSCSArgs2.BytesReady
+2	5753	36		mov __RLSBResult2, __CLSCSArgs2.Result
+2	5753	38		release __CLSCSMutex2
+2	5753	39	#line 5753 "NXTDefs.h"
+2	5754	39		sub __RLSBIterations2, __RLSBIterations2, __constVal1
+2	5755	43		brtst 2, __RLSBError2, __RLSBIterations2
+2	5756	46		brtst 0, __RLSBError2, __RLSBResult2
+2	5757	49		brtst 4, __RLSBReadyToRead2, __RLSBResult2
+2	5759	52		wait 15
+2	5760	54		jmp __RLSBDoCheckStatus2
+2	5763	56	#pragma macro 25
+2	5763	56		acquire __CLSRMutex2
+2	5763	57		set __CLSRArgs2.Port, 2
+2	5763	60		mov __CLSRArgs2.BufferLen, __RLSBytesCount2
+2	5763	62		syscall 22, __CLSRArgs2
+2	5763	65		mov __RLSReadBuf2, __CLSRArgs2.Buffer
+2	5763	67		mov __RLSBResult2, __CLSRArgs2.Result
+2	5763	69		release __CLSRMutex2
+2	5763	70	#line 5763 "NXTDefs.h"
+2	5764	70		brtst 5, __RLSBError2, __RLSBResult2
+2	5765	73		mov __RLSLastGoodRead2, __RLSReadBuf2
+2	5766	75		jmp __RLSBDone2
+2	5768	77		mov __RLSReadBuf2, __RLSLastGoodRead2
+2	5770	79		arrsize __RLSBytesCount2, __RLSReadBuf2
+2	5772	82		subret ____ReadLSBytes2_return
+3	93	0	#line 93 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	94	0		set turn_time, 0
+3	93	3	#line 93 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	93	3	#line 93 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	93	3	#line 93 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	94	3		mov __D0wander, wndr_cnt
+3	94	5	#line 94 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	95	5		tst 5, __zfwander, __D0wander
+3	94	8	#line 94 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	95	8		brtst 4, __NXC_Label_608, __zfwander
+3	95	11	#line 95 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	96	11		sub wndr_cnt, wndr_cnt, __constVal1
+3	95	15	#line 95 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	96	15	#line 96 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	97	15		jmp __NXC_Label_609
+3	96	17	#line 96 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	97	17		set __D0wander, 150
+3	96	20	#line 96 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	97	20	#pragma macro 8
+3	97	20		acquire __RandomMutex
+3	97	21		syscall 24, __RandomArgs
+3	97	24		mov __RandomTmp, __RandomArgs.Result
+3	97	26		add __RandomTmp, __RandomArgs.Result, __constVal32768
+3	97	30		mul __RandomTmp, __RandomTmp, __D0wander
+3	97	34		div __RandomTmp, __RandomTmp, __constVal65536
+3	97	38		mov __D0wander, __RandomTmp
+3	97	40		release __RandomMutex
+3	7133	41	#line 7133 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	96	41	#line 96 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	97	41	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	97	41	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	98	41		add wndr_cnt, __D0wander, __constVal150
+3	97	45	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	97	45	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	97	45	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	98	45		mov __D0wander, dir
+3	98	47	#line 98 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	99	47		tst 5, __zfwander, __D0wander
+3	98	50	#line 98 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	99	50		brtst 4, __NXC_Label_616, __zfwander
+3	99	53	#line 99 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	100	53		set dir, 0
+3	99	56	#line 99 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	99	56	#line 99 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	99	56	#line 99 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	99	56	#line 99 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	99	56	#line 99 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	99	56	#line 99 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	100	56		add __signed_stack_001wander, __constVal30, __constVal5
+3	99	60	#line 99 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	99	60	#line 99 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	100	60		set __D0wander, 10
+3	100	63	#line 100 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	101	63	#pragma macro 8
+3	101	63		acquire __RandomMutex
+3	101	64		syscall 24, __RandomArgs
+3	101	67		mov __RandomTmp, __RandomArgs.Result
+3	101	69		add __RandomTmp, __RandomArgs.Result, __constVal32768
+3	101	73		mul __RandomTmp, __RandomTmp, __D0wander
+3	101	77		div __RandomTmp, __RandomTmp, __constVal65536
+3	101	81		mov __D0wander, __RandomTmp
+3	101	83		release __RandomMutex
+3	7175	84	#line 7175 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	100	84	#line 100 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	101	84		add motor_A, __signed_stack_001wander, __D0wander
+3	100	88	#line 100 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	100	88	#line 100 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	100	88	#line 100 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	100	88	#line 100 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	100	88	#line 100 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	100	88	#line 100 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	101	88		sub __signed_stack_001wander, __constVal30, __constVal5
+3	100	92	#line 100 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	100	92	#line 100 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	101	92		set __D0wander, 10
+3	101	95	#line 101 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	102	95	#pragma macro 8
+3	102	95		acquire __RandomMutex
+3	102	96		syscall 24, __RandomArgs
+3	102	99		mov __RandomTmp, __RandomArgs.Result
+3	102	101		add __RandomTmp, __RandomArgs.Result, __constVal32768
+3	102	105		mul __RandomTmp, __RandomTmp, __D0wander
+3	102	109		div __RandomTmp, __RandomTmp, __constVal65536
+3	102	113		mov __D0wander, __RandomTmp
+3	102	115		release __RandomMutex
+3	7198	116	#line 7198 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	101	116	#line 101 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	102	116		add motor_C, __signed_stack_001wander, __D0wander
+3	101	120	#line 101 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	101	120	#line 101 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	102	120	#line 102 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	103	120		jmp __NXC_Label_627
+3	103	122	#line 103 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	104	122		set dir, 1
+3	103	125	#line 103 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	103	125	#line 103 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	103	125	#line 103 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	103	125	#line 103 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	103	125	#line 103 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	103	125	#line 103 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	104	125		sub __signed_stack_001wander, __constVal30, __constVal5
+3	103	129	#line 103 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	103	129	#line 103 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	104	129		set __D0wander, 10
+3	104	132	#line 104 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	105	132	#pragma macro 8
+3	105	132		acquire __RandomMutex
+3	105	133		syscall 24, __RandomArgs
+3	105	136		mov __RandomTmp, __RandomArgs.Result
+3	105	138		add __RandomTmp, __RandomArgs.Result, __constVal32768
+3	105	142		mul __RandomTmp, __RandomTmp, __D0wander
+3	105	146		div __RandomTmp, __RandomTmp, __constVal65536
+3	105	150		mov __D0wander, __RandomTmp
+3	105	152		release __RandomMutex
+3	7231	153	#line 7231 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	104	153	#line 104 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	105	153		add motor_A, __signed_stack_001wander, __D0wander
+3	104	157	#line 104 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	104	157	#line 104 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	104	157	#line 104 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	104	157	#line 104 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	104	157	#line 104 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	104	157	#line 104 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	105	157		add __signed_stack_001wander, __constVal30, __constVal5
+3	104	161	#line 104 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	104	161	#line 104 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	105	161		set __D0wander, 10
+3	105	164	#line 105 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	106	164	#pragma macro 8
+3	106	164		acquire __RandomMutex
+3	106	165		syscall 24, __RandomArgs
+3	106	168		mov __RandomTmp, __RandomArgs.Result
+3	106	170		add __RandomTmp, __RandomArgs.Result, __constVal32768
+3	106	174		mul __RandomTmp, __RandomTmp, __D0wander
+3	106	178		div __RandomTmp, __RandomTmp, __constVal65536
+3	106	182		mov __D0wander, __RandomTmp
+3	106	184		release __RandomMutex
+3	7254	185	#line 7254 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	105	185	#line 105 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	106	185		add motor_C, __signed_stack_001wander, __D0wander
+3	105	189	#line 105 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	105	189	#line 105 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	107	189	#line 107 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	107	189	#line 107 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	107	189	#line 107 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	108	189		mov __signed_stack_001wander, distance
+3	107	191	#line 107 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	107	191	#line 107 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	108	191		set __D0wander, 91
+3	107	194	#line 107 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	108	194		cmp 2, __zfwander, __signed_stack_001wander, __D0wander
+3	107	198	#line 107 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	108	198		mov __D0wander, __zfwander
+3	108	200	#line 108 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	109	200		brtst 4, __NXC_Label_640, __zfwander
+3	109	203	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	110	203		set state, 4
+3	109	206	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	109	206	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	109	206	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	110	206		jmp __NXC_Label_643
+3	109	208	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	110	208		mov __signed_stack_001wander, leftValue
+3	109	210	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	109	210	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	110	210		set __D0wander, 35
+3	109	213	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	110	213		cmp 2, __zfwander, __signed_stack_001wander, __D0wander
+3	109	217	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	110	217		mov __D0wander, __zfwander
+3	109	219	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	110	219		brtst 5, __NXC_Label_644, __zfwander
+3	109	222	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	110	222		mov __signed_stack_001wander, __D0wander
+3	109	224	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	110	224		mov __signed_stack_002wander, rightValue
+3	109	226	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	109	226	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	110	226		set __D0wander, 35
+3	109	229	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	110	229		cmp 2, __zfwander, __signed_stack_002wander, __D0wander
+3	109	233	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	109	233	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	110	233		or __D0wander, __signed_stack_001wander, __zfwander
+3	111	237	#line 111 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	112	237		tst 5, __zfwander, __D0wander
+3	111	240	#line 111 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	112	240		brtst 4, __NXC_Label_647, __zfwander
+3	111	243	#line 111 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	111	243	#line 111 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	7921	243	#line 7921 "NXCDefs.h"
+3	7922	243		wait 150
+3	7921	245	#line 7921 "NXCDefs.h"
+3	112	245	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	112	245	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	113	245		mov __signed_stack_001wander, leftValue
+3	112	247	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	112	247	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	113	247		set __D0wander, 35
+3	112	250	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	113	250		cmp 2, __zfwander, __signed_stack_001wander, __D0wander
+3	112	254	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	113	254		mov __D0wander, __zfwander
+3	112	256	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	113	256		brtst 5, __NXC_Label_650, __zfwander
+3	112	259	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	113	259		mov __signed_stack_001wander, __D0wander
+3	112	261	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	113	261		mov __signed_stack_002wander, rightValue
+3	112	263	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	112	263	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	113	263		set __D0wander, 35
+3	112	266	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	113	266		cmp 2, __zfwander, __signed_stack_002wander, __D0wander
+3	112	270	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	112	270	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	113	270		or __D0wander, __signed_stack_001wander, __zfwander
+3	113	274	#line 113 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	114	274		tst 5, __zfwander, __D0wander
+3	113	277	#line 113 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	114	277		brtst 4, __NXC_Label_653, __zfwander
+3	114	280	#line 114 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	115	280		set state, 1
+3	114	283	#line 114 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	114	283	#line 114 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	116	283	#line 116 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	116	283	#line 116 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	116	283	#line 116 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	117	283	#line 117 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	118	283		set mot, 3
+3	117	286	#line 117 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	117	286	#line 117 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	122	286	#line 122 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	123	286		subret __wander_return
+4	123	0	#line 123 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	124	0		mov __signed_stack_001followLine, reset_count
+4	123	2	#line 123 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	123	2	#line 123 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	124	2		set __D0followLine, 0
+4	123	5	#line 123 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	124	5		cmp 4, __zffollowLine, __signed_stack_001followLine, __D0followLine
+4	123	9	#line 123 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	124	9		mov __D0followLine, __zffollowLine
+4	124	11	#line 124 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	125	11		brtst 4, __NXC_Label_660, __zffollowLine
+4	125	14	#line 125 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	126	14		set turn_time, 0
+4	125	17	#line 125 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	125	17	#line 125 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	127	17	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	128	17		jmp __NXC_Label_663
+4	128	19	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	128	19	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	129	19		sub reset_count, reset_count, __constVal10
+4	128	23	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	130	23	#line 130 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	130	23	#line 130 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	131	23		mov __signed_stack_001followLine, leftValue
+4	130	25	#line 130 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	130	25	#line 130 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	131	25		set __D0followLine, 35
+4	130	28	#line 130 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	131	28		cmp 1, __zffollowLine, __signed_stack_001followLine, __D0followLine
+4	130	32	#line 130 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	131	32		mov __D0followLine, __zffollowLine
+4	131	34	#line 131 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	132	34		brtst 4, __NXC_Label_668, __zffollowLine
+4	132	37	#line 132 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	133	37		set dir, 1
+4	132	40	#line 132 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	132	40	#line 132 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	133	40	#line 133 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	134	40		set state, 2
+4	133	43	#line 133 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	133	43	#line 133 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	133	43	#line 133 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	134	43		jmp __NXC_Label_673
+4	133	45	#line 133 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	134	45		mov __signed_stack_001followLine, rightValue
+4	133	47	#line 133 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	133	47	#line 133 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	134	47		set __D0followLine, 35
+4	133	50	#line 133 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	134	50		cmp 1, __zffollowLine, __signed_stack_001followLine, __D0followLine
+4	133	54	#line 133 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	134	54		mov __D0followLine, __zffollowLine
+4	134	56	#line 134 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	135	56		brtst 4, __NXC_Label_676, __zffollowLine
+4	135	59	#line 135 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	136	59		set dir, 0
+4	135	62	#line 135 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	135	62	#line 135 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	136	62	#line 136 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	137	62		set state, 2
+4	136	65	#line 136 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	136	65	#line 136 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	138	65	#line 138 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	139	65		jmp __NXC_Label_681
+4	139	67	#line 139 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	140	67		set motor_A, 30
+4	139	70	#line 139 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	139	70	#line 139 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	140	70	#line 140 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	141	70		set motor_C, 30
+4	140	73	#line 140 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	140	73	#line 140 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	141	73	#line 141 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	141	73	#line 141 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	141	73	#line 141 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	142	73		mov __signed_stack_001followLine, distance
+4	141	75	#line 141 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	141	75	#line 141 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	142	75		set __D0followLine, 91
+4	141	78	#line 141 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	142	78		cmp 2, __zffollowLine, __signed_stack_001followLine, __D0followLine
+4	141	82	#line 141 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	142	82		mov __D0followLine, __zffollowLine
+4	142	84	#line 142 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	143	84		brtst 4, __NXC_Label_688, __zffollowLine
+4	143	87	#line 143 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	144	87		set state, 4
+4	143	90	#line 143 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	143	90	#line 143 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	144	90	#line 144 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	145	90	#line 145 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	146	90		set mot, 3
+4	145	93	#line 145 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	145	93	#line 145 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	150	93	#line 150 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	151	93		subret __followLine_return
+5	152	0	#line 152 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	153	0		set reset_count, 500
+5	152	3	#line 152 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	152	3	#line 152 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	152	3	#line 152 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	153	3		mov __D0turnLine, dir
+5	153	5	#line 153 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	154	5		tst 5, __zfturnLine, __D0turnLine
+5	153	8	#line 153 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	154	8		brtst 4, __NXC_Label_697, __zfturnLine
+5	154	11	#line 154 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	154	11	#line 154 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	155	11		add turn_time, turn_time, __constVal10
+5	154	15	#line 154 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	155	15	#line 155 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	156	15		jmp __NXC_Label_700
+5	156	17	#line 156 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	156	17	#line 156 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	157	17		sub turn_time, turn_time, __constVal10
+5	156	21	#line 156 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	159	21	#line 159 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	159	21	#line 159 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	160	21		mov __D0turnLine, dir
+5	160	23	#line 160 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	161	23		tst 5, __zfturnLine, __D0turnLine
+5	160	26	#line 160 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	161	26		brtst 4, __NXC_Label_705, __zfturnLine
+5	161	29	#line 161 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	162	29		set mot, 2
+5	161	32	#line 161 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	161	32	#line 161 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	162	32	#line 162 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	163	32		jmp __NXC_Label_708
+5	163	34	#line 163 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	164	34		set mot, 1
+5	163	37	#line 163 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	163	37	#line 163 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	165	37	#line 165 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	166	37	#line 166 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	167	37		set motor_A, 32
+5	166	40	#line 166 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	166	40	#line 166 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	167	40	#line 167 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	168	40		set motor_C, 32
+5	167	43	#line 167 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	167	43	#line 167 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	167	43	#line 167 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	168	43		mov __signed_stack_001turnLine, distance
+5	167	45	#line 167 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	167	45	#line 167 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	168	45		set __D0turnLine, 91
+5	167	48	#line 167 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	168	48		cmp 2, __zfturnLine, __signed_stack_001turnLine, __D0turnLine
+5	167	52	#line 167 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	168	52		mov __D0turnLine, __zfturnLine
+5	168	54	#line 168 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	169	54		brtst 4, __NXC_Label_717, __zfturnLine
+5	169	57	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	170	57		set state, 4
+5	169	60	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	169	60	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	169	60	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	170	60		jmp __NXC_Label_720
+5	169	62	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	170	62		mov __signed_stack_001turnLine, turn_time
+5	169	64	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	169	64	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	170	64		set __D0turnLine, 1300
+5	169	67	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	170	67		cmp 1, __zfturnLine, __signed_stack_001turnLine, __D0turnLine
+5	169	71	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	170	71		mov __D0turnLine, __zfturnLine
+5	169	73	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	170	73		brtst 5, __NXC_Label_721, __zfturnLine
+5	169	76	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	170	76		mov __signed_stack_001turnLine, __D0turnLine
+5	169	78	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	170	78		mov __signed_stack_002turnLine, turn_time
+5	169	80	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	169	80	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	170	80		set __D0turnLine, -1300
+5	169	83	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	170	83		cmp 0, __zfturnLine, __signed_stack_002turnLine, __D0turnLine
+5	169	87	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	169	87	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	170	87		or __D0turnLine, __signed_stack_001turnLine, __zfturnLine
+5	170	91	#line 170 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	171	91		tst 5, __zfturnLine, __D0turnLine
+5	170	94	#line 170 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	171	94		brtst 4, __NXC_Label_724, __zfturnLine
+5	171	97	#line 171 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	172	97		set escape_time, 1500
+5	171	100	#line 171 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	171	100	#line 171 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	172	100	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	173	100		set state, 3
+5	172	103	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	172	103	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	172	103	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	173	103		jmp __NXC_Label_729
+5	172	105	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	173	105		mov __signed_stack_001turnLine, leftValue
+5	172	107	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	172	107	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	173	107		set __D0turnLine, 35
+5	172	110	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	173	110		cmp 2, __zfturnLine, __signed_stack_001turnLine, __D0turnLine
+5	172	114	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	173	114		mov __D0turnLine, __zfturnLine
+5	172	116	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	173	116		brtst 4, __NXC_Label_731, __zfturnLine
+5	172	119	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	173	119		mov __signed_stack_001turnLine, __D0turnLine
+5	172	121	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	173	121		mov __signed_stack_002turnLine, rightValue
+5	172	123	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	172	123	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	173	123		set __D0turnLine, 35
+5	172	126	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	173	126		cmp 2, __zfturnLine, __signed_stack_002turnLine, __D0turnLine
+5	172	130	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	172	130	#line 172 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	173	130		and __D0turnLine, __signed_stack_001turnLine, __zfturnLine
+5	173	134	#line 173 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	174	134		tst 5, __zfturnLine, __D0turnLine
+5	173	137	#line 173 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	174	137		brtst 4, __NXC_Label_732, __zfturnLine
+5	174	140	#line 174 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	175	140		set state, 1
+5	174	143	#line 174 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	174	143	#line 174 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	180	143	#line 180 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	180	143	#line 180 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	180	143	#line 180 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	180	143	#line 180 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	181	143		subret __turnLine_return
+6	181	0	#line 181 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	182	0		mov __signed_stack_001escapeLine, turn_time
+6	181	2	#line 181 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	181	2	#line 181 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	182	2		set __D0escapeLine, 10
+6	181	5	#line 181 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	182	5		cmp 3, __zfescapeLine, __signed_stack_001escapeLine, __D0escapeLine
+6	181	9	#line 181 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	182	9		mov __D0escapeLine, __zfescapeLine
+6	181	11	#line 181 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	182	11		brtst 5, __NXC_Label_735, __zfescapeLine
+6	181	14	#line 181 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	182	14		mov __signed_stack_001escapeLine, __D0escapeLine
+6	181	16	#line 181 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	182	16		mov __signed_stack_002escapeLine, turn_time
+6	181	18	#line 181 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	181	18	#line 181 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	182	18		set __D0escapeLine, -10
+6	181	21	#line 181 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	182	21		cmp 2, __zfescapeLine, __signed_stack_002escapeLine, __D0escapeLine
+6	181	25	#line 181 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	181	25	#line 181 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	182	25		or __D0escapeLine, __signed_stack_001escapeLine, __zfescapeLine
+6	182	29	#line 182 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	183	29		tst 5, __zfescapeLine, __D0escapeLine
+6	182	32	#line 182 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	183	32		brtst 4, __NXC_Label_738, __zfescapeLine
+6	182	35	#line 182 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	183	35		mov __signed_stack_001escapeLine, turn_time
+6	182	37	#line 182 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	182	37	#line 182 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	183	37		set __D0escapeLine, 10
+6	182	40	#line 182 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	183	40		cmp 3, __zfescapeLine, __signed_stack_001escapeLine, __D0escapeLine
+6	182	44	#line 182 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	183	44		mov __D0escapeLine, __zfescapeLine
+6	183	46	#line 183 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	184	46		brtst 4, __NXC_Label_741, __zfescapeLine
+6	184	49	#line 184 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	185	49		set mot, 1
+6	184	52	#line 184 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	184	52	#line 184 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	185	52	#line 185 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	185	52	#line 185 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	186	52		sub turn_time, turn_time, __constVal10
+6	185	56	#line 185 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	186	56	#line 186 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	187	56		jmp __NXC_Label_746
+6	187	58	#line 187 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	188	58		set mot, 2
+6	187	61	#line 187 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	187	61	#line 187 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	188	61	#line 188 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	188	61	#line 188 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	189	61		add turn_time, turn_time, __constVal10
+6	188	65	#line 188 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	189	65	#line 189 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	189	65	#line 189 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	190	65		jmp __NXC_Label_751
+6	189	67	#line 189 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	190	67		mov __signed_stack_001escapeLine, escape_time
+6	189	69	#line 189 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	189	69	#line 189 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	190	69		set __D0escapeLine, 10
+6	189	72	#line 189 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	190	72		cmp 3, __zfescapeLine, __signed_stack_001escapeLine, __D0escapeLine
+6	189	76	#line 189 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	190	76		mov __D0escapeLine, __zfescapeLine
+6	190	78	#line 190 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	191	78		brtst 4, __NXC_Label_754, __zfescapeLine
+6	191	81	#line 191 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	191	81	#line 191 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	192	81		sub escape_time, escape_time, __constVal10
+6	191	85	#line 191 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	192	85	#line 192 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	193	85		set mot, 3
+6	192	88	#line 192 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	192	88	#line 192 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	193	88	#line 193 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	194	88		jmp __NXC_Label_759
+6	194	90	#line 194 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	195	90		set state, 0
+6	194	93	#line 194 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	194	93	#line 194 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	195	93	#line 195 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	196	93		set mot, 3
+6	195	96	#line 195 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	195	96	#line 195 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	196	96	#line 196 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	196	96	#line 196 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	196	96	#line 196 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	197	96		mov __signed_stack_001escapeLine, distance
+6	196	98	#line 196 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	196	98	#line 196 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	197	98		set __D0escapeLine, 91
+6	196	101	#line 196 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	197	101		cmp 2, __zfescapeLine, __signed_stack_001escapeLine, __D0escapeLine
+6	196	105	#line 196 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	197	105		mov __D0escapeLine, __zfescapeLine
+6	197	107	#line 197 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	198	107		brtst 4, __NXC_Label_766, __zfescapeLine
+6	198	110	#line 198 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	199	110		set state, 4
+6	198	113	#line 198 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	198	113	#line 198 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	199	113	#line 199 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	200	113	#line 200 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	201	113		set motor_A, 30
+6	200	116	#line 200 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	200	116	#line 200 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	201	116	#line 201 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	202	116		set motor_C, 30
+6	201	119	#line 201 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	201	119	#line 201 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	201	119	#line 201 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	202	119		set __signed_stack_001escapeLine, 1560
+6	201	122	#line 201 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	201	122	#line 201 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	202	122		set __signed_stack_002escapeLine, 15
+6	201	125	#line 201 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	201	125	#line 201 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	202	125		set __signed_stack_003escapeLine, 3
+6	201	128	#line 201 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	201	128	#line 201 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	202	128		set __D0escapeLine, 0
+6	202	131	#line 202 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	203	131		acquire __SPTArgsMutex
+6	202	132	#line 202 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	203	132		mov __SPTArgs.Frequency, __signed_stack_001escapeLine
+6	202	134	#line 202 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	203	134		mov __SPTArgs.Duration, __signed_stack_002escapeLine
+6	202	136	#line 202 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	203	136		mov __SPTArgs.Volume, __signed_stack_003escapeLine
+6	202	139	#line 202 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	203	139		mov __SPTArgs.Loop, __D0escapeLine
+6	202	142	#line 202 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	203	142		syscall 10, __SPTArgs
+6	202	145	#line 202 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	203	145		mov __D0escapeLine, __SPTArgs.Result
+6	202	148	#line 202 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	203	148		release __SPTArgsMutex
+6	202	149	#line 202 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	208	149	#line 208 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	209	149		subret __escapeLine_return
+7	209	0	#line 209 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	209	0	#line 209 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	209	0	#line 209 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	209	0	#line 209 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	210	0		sub __signed_stack_001objectApproach, distance, __constVal10
+7	209	4	#line 209 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	210	4	#line 210 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	210	4	#line 210 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	211	4		mul kp, __signed_stack_001objectApproach, coefficient
+7	210	8	#line 210 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	210	8	#line 210 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	210	8	#line 210 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	211	8		mov __signed_stack_001objectApproach, distance
+7	210	10	#line 210 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	210	10	#line 210 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	211	10		set __D0objectApproach, 10
+7	210	13	#line 210 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	211	13		cmp 2, __zfobjectApproach, __signed_stack_001objectApproach, __D0objectApproach
+7	210	17	#line 210 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	211	17		mov __D0objectApproach, __zfobjectApproach
+7	211	19	#line 211 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	212	19		brtst 4, __NXC_Label_787, __zfobjectApproach
+7	212	22	#line 212 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	213	22		set kp, 0
+7	212	25	#line 212 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	212	25	#line 212 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	213	25	#line 213 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	214	25		set state, 5
+7	213	28	#line 213 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	213	28	#line 213 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	214	28	#line 214 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	215	28		set escape_time, 1000
+7	214	31	#line 214 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	214	31	#line 214 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	215	31	#line 215 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	216	31		set turn_time, 1000
+7	215	34	#line 215 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	215	34	#line 215 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	216	34	#line 216 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	217	34	#pragma macro 7
+7	217	34		setout __OUT_AC, 2, __constVal0, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+7	8019	57	#line 8019 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	216	57	#line 216 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	216	57	#line 216 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	217	57		strcat __strbufobjectApproach, __constStr0009
+7	216	61	#line 216 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	217	61		set __signed_stack_001objectApproach, 5
+7	216	64	#line 216 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	216	64	#line 216 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	217	64		set __D0objectApproach, 0
+7	217	67	#line 217 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	217	67	#line 217 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	218	67		mov __SPFArgs.Filename, __strbufobjectApproach
+7	217	69	#line 217 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	218	69		mov __SPFArgs.Volume, __signed_stack_001objectApproach
+7	217	71	#line 217 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	218	71		mov __SPFArgs.Loop, __D0objectApproach
+7	217	73	#line 217 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	218	73		syscall 9, __SPFArgs
+7	217	76	#line 217 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	217	76	#line 217 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	217	76	#line 217 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	217	76	#line 217 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	217	76	#line 217 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	7921	76	#line 7921 "NXCDefs.h"
+7	7922	76		wait 1500
+7	7921	78	#line 7921 "NXCDefs.h"
+7	218	78	#line 218 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	218	78	#line 218 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	219	78		jmp __NXC_Label_802
+7	218	80	#line 218 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	219	80		mov __signed_stack_001objectApproach, distance
+7	218	82	#line 218 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	218	82	#line 218 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	219	82		set __D0objectApproach, 91
+7	218	85	#line 218 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	219	85		cmp 1, __zfobjectApproach, __signed_stack_001objectApproach, __D0objectApproach
+7	218	89	#line 218 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	219	89		mov __D0objectApproach, __zfobjectApproach
+7	219	91	#line 219 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	220	91		brtst 4, __NXC_Label_805, __zfobjectApproach
+7	220	94	#line 220 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	221	94		set kp, 0
+7	220	97	#line 220 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	220	97	#line 220 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	221	97	#line 221 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	222	97		set state, 0
+7	221	100	#line 221 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	221	100	#line 221 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	222	100	#line 222 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	222	100	#line 222 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	222	100	#line 222 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	222	100	#line 222 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	222	100	#line 222 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	222	100	#line 222 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	223	100		mul __signed_stack_001objectApproach, __constVal55, kp
+7	222	104	#line 222 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	222	104	#line 222 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	222	104	#line 222 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	223	104		div __signed_stack_001objectApproach, __signed_stack_001objectApproach, __constVal100
+7	222	108	#line 222 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	223	108	#line 223 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	223	108	#line 223 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	224	108		add motor_A, __signed_stack_001objectApproach, __constVal5
+7	223	112	#line 223 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	223	112	#line 223 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	223	112	#line 223 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	223	112	#line 223 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	223	112	#line 223 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	223	112	#line 223 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	224	112		mul __signed_stack_001objectApproach, __constVal55, kp
+7	223	116	#line 223 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	223	116	#line 223 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	223	116	#line 223 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	224	116		div __signed_stack_001objectApproach, __signed_stack_001objectApproach, __constVal100
+7	223	120	#line 223 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	224	120	#line 224 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	224	120	#line 224 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	225	120		add motor_C, __signed_stack_001objectApproach, __constVal5
+7	224	124	#line 224 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	224	124	#line 224 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	225	124	#line 225 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	226	124		set mot, 7
+7	225	127	#line 225 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	225	127	#line 225 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	229	127	#line 229 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	230	127		subret __objectApproach_return
+8	230	0	#line 230 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	231	0		mov __signed_stack_001objectEscape, escape_time
+8	230	2	#line 230 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	230	2	#line 230 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	231	2		set __D0objectEscape, 10
+8	230	5	#line 230 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	231	5		cmp 3, __zfobjectEscape, __signed_stack_001objectEscape, __D0objectEscape
+8	230	9	#line 230 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	231	9		mov __D0objectEscape, __zfobjectEscape
+8	231	11	#line 231 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	232	11		brtst 4, __NXC_Label_822, __zfobjectEscape
+8	232	14	#line 232 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	232	14	#line 232 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	233	14		sub escape_time, escape_time, __constVal10
+8	232	18	#line 232 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	233	18	#line 233 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	234	18		set mot, 4
+8	233	21	#line 233 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	233	21	#line 233 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	233	21	#line 233 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	234	21		jmp __NXC_Label_827
+8	233	23	#line 233 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	234	23		mov __signed_stack_001objectEscape, turn_time
+8	233	25	#line 233 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	233	25	#line 233 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	234	25		set __D0objectEscape, 10
+8	233	28	#line 233 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	234	28		cmp 3, __zfobjectEscape, __signed_stack_001objectEscape, __D0objectEscape
+8	233	32	#line 233 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	234	32		mov __D0objectEscape, __zfobjectEscape
+8	235	34	#line 235 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	236	34		brtst 4, __NXC_Label_830, __zfobjectEscape
+8	235	37	#line 235 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	235	37	#line 235 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	236	37	#line 236 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	236	37	#line 236 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	237	37		add mot, dir, __constVal1
+8	236	41	#line 236 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	236	41	#line 236 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	237	41	#line 237 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	237	41	#line 237 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	238	41		sub turn_time, turn_time, __constVal10
+8	237	45	#line 237 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	238	45	#line 238 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	239	45		jmp __NXC_Label_835
+8	239	47	#line 239 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	240	47		set state, 0
+8	239	50	#line 239 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	239	50	#line 239 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	240	50	#line 240 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	241	50		set mot, 7
+8	240	53	#line 240 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	240	53	#line 240 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	241	53	#line 241 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	241	53	#line 241 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	242	53	#line 242 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	243	53		set motor_A, 30
+8	242	56	#line 242 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	242	56	#line 242 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	243	56	#line 243 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	244	56		set motor_C, 30
+8	243	59	#line 243 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	243	59	#line 243 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	248	59	#line 248 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	249	59		subret __objectEscape_return
+9	250	0	#line 250 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	251	0		set __D0stateMachine, 2
+9	250	3	#line 250 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	251	3	#pragma macro 8
+9	251	3		acquire __RandomMutex
+9	251	4		syscall 24, __RandomArgs
+9	251	7		mov __RandomTmp, __RandomArgs.Result
+9	251	9		add __RandomTmp, __RandomArgs.Result, __constVal32768
+9	251	13		mul __RandomTmp, __RandomTmp, __D0stateMachine
+9	251	17		div __RandomTmp, __RandomTmp, __constVal65536
+9	251	21		mov __D0stateMachine, __RandomTmp
+9	251	23		release __RandomMutex
+9	8273	24	#line 8273 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	250	24	#line 250 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	251	24	#line 251 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	251	24	#line 251 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	252	24		sub dir, __D0stateMachine, __constVal1
+9	251	28	#line 251 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	251	28	#line 251 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	251	28	#line 251 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	252	28		set __D0stateMachine, 1
+9	252	31	#line 252 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	253	31		tst 5, __zfstateMachine, __D0stateMachine
+9	252	34	#line 252 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	253	34		brtst 4, __NXC_Label_849, __zfstateMachine
+9	252	37	#line 252 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	253	37		mov __D0stateMachine, state
+9	256	39		brcmp 4, __NXC_Label_855, __constVal0, __D0stateMachine
+9	257	43		brcmp 4, __NXC_Label_856, __constVal1, __D0stateMachine
+9	258	47		brcmp 4, __NXC_Label_857, __constVal2, __D0stateMachine
+9	259	51		brcmp 4, __NXC_Label_858, __constVal3, __D0stateMachine
+9	260	55		brcmp 4, __NXC_Label_859, __constVal4, __D0stateMachine
+9	261	59		brcmp 4, __NXC_Label_860, __constVal5, __D0stateMachine
+9	262	63		jmp __NXC_Label_854
+9	256	65	#line 256 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	257	65	#line 257 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	258	65		subcall wander, __wander_return
+9	257	67	#line 257 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	260	67	#line 260 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	261	67		jmp __NXC_Label_854
+9	260	69	#line 260 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	261	69	#line 261 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	262	69	#line 262 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	263	69		subcall followLine, __followLine_return
+9	262	71	#line 262 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	265	71	#line 265 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	266	71		jmp __NXC_Label_854
+9	265	73	#line 265 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	266	73	#line 266 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	267	73	#line 267 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	268	73		subcall turnLine, __turnLine_return
+9	267	75	#line 267 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	270	75	#line 270 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	271	75		jmp __NXC_Label_854
+9	270	77	#line 270 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	271	77	#line 271 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	272	77	#line 272 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	273	77		subcall escapeLine, __escapeLine_return
+9	272	79	#line 272 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	275	79	#line 275 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	276	79		jmp __NXC_Label_854
+9	275	81	#line 275 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	276	81	#line 276 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	277	81	#line 277 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	278	81		subcall objectApproach, __objectApproach_return
+9	277	83	#line 277 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	280	83	#line 280 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	281	83		jmp __NXC_Label_854
+9	280	85	#line 280 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	281	85	#line 281 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	282	85	#line 282 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	283	85		subcall objectEscape, __objectEscape_return
+9	282	87	#line 282 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	284	87	#line 284 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	284	87	#line 284 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	285	87	#line 285 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	285	87	#line 285 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	286	87		mov __D0stateMachine, mot
+9	289	89		brcmp 4, __NXC_Label_864, __constVal1, __D0stateMachine
+9	290	93		brcmp 4, __NXC_Label_869, __constVal2, __D0stateMachine
+9	291	97		brcmp 4, __NXC_Label_874, __constVal3, __D0stateMachine
+9	292	101		brcmp 4, __NXC_Label_879, __constVal4, __D0stateMachine
+9	293	105		brcmp 4, __NXC_Label_888, __constVal7, __D0stateMachine
+9	294	109		jmp __NXC_Label_863
+9	288	111	#line 288 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	288	111	#line 288 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	289	111		mov __D0stateMachine, motor_A
+9	289	113	#line 289 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	290	113	#pragma macro 10
+9	290	113		acquire __OnRevMutex
+9	290	114		neg __OnRev_Tmp, __D0stateMachine
+9	290	117		setout __constVal0, 2, __OnRev_Tmp, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+9	290	140		release __OnRevMutex
+9	8372	141	#line 8372 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	289	141	#line 289 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	289	141	#line 289 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	290	141		mov __D0stateMachine, motor_C
+9	290	143	#line 290 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	291	143	#pragma macro 7
+9	291	143		setout __constVal2, 2, __D0stateMachine, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+9	8379	166	#line 8379 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	290	166	#line 290 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	292	166	#line 292 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	293	166		jmp __NXC_Label_863
+9	292	168	#line 292 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	293	168	#line 293 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	293	168	#line 293 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	294	168		mov __D0stateMachine, motor_A
+9	294	170	#line 294 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	295	170	#pragma macro 7
+9	295	170		setout __constVal0, 2, __D0stateMachine, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+9	8391	193	#line 8391 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	294	193	#line 294 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	294	193	#line 294 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	295	193		mov __D0stateMachine, motor_C
+9	295	195	#line 295 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	296	195	#pragma macro 10
+9	296	195		acquire __OnRevMutex
+9	296	196		neg __OnRev_Tmp, __D0stateMachine
+9	296	199		setout __constVal2, 2, __OnRev_Tmp, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+9	296	222		release __OnRevMutex
+9	8398	223	#line 8398 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	295	223	#line 295 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	297	223	#line 297 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	298	223		jmp __NXC_Label_863
+9	297	225	#line 297 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	298	225	#line 298 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	298	225	#line 298 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	299	225		mov __D0stateMachine, motor_A
+9	299	227	#line 299 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	300	227	#pragma macro 10
+9	300	227		acquire __OnRevMutex
+9	300	228		neg __OnRev_Tmp, __D0stateMachine
+9	300	231		setout __constVal0, 2, __OnRev_Tmp, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+9	300	254		release __OnRevMutex
+9	8410	255	#line 8410 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	299	255	#line 299 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	299	255	#line 299 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	300	255		mov __D0stateMachine, motor_C
+9	300	257	#line 300 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	301	257	#pragma macro 10
+9	301	257		acquire __OnRevMutex
+9	301	258		neg __OnRev_Tmp, __D0stateMachine
+9	301	261		setout __constVal2, 2, __OnRev_Tmp, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+9	301	284		release __OnRevMutex
+9	8417	285	#line 8417 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	300	285	#line 300 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	302	285	#line 302 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	303	285		jmp __NXC_Label_863
+9	302	287	#line 302 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	303	287	#line 303 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	303	287	#line 303 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	304	287		mov __signed_stack_001stateMachine, motor_A
+9	303	289	#line 303 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	303	289	#line 303 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	304	289		set __D0stateMachine, 1
+9	304	292	#line 304 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	305	292	#pragma macro 7
+9	305	292		setout __constVal0, 2, __signed_stack_001stateMachine, 1, __constVal7, 8, __D0stateMachine, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+9	8435	315	#line 8435 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	304	315	#line 304 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	304	315	#line 304 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	305	315		mov __signed_stack_001stateMachine, motor_C
+9	304	317	#line 304 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	304	317	#line 304 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	305	317		set __D0stateMachine, 1
+9	305	320	#line 305 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	306	320	#pragma macro 7
+9	306	320		setout __constVal2, 2, __signed_stack_001stateMachine, 1, __constVal7, 8, __D0stateMachine, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+9	8448	343	#line 8448 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	305	343	#line 305 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	307	343	#line 307 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	308	343		jmp __NXC_Label_863
+9	307	345	#line 307 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	308	345	#line 308 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	308	345	#line 308 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	309	345		mov __signed_stack_001stateMachine, motor_A
+9	308	347	#line 308 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	308	347	#line 308 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	309	347		set __D0stateMachine, 1
+9	309	350	#line 309 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	310	350	#pragma macro 10
+9	310	350		acquire __OnRevMutex
+9	310	351		neg __OnRev_Tmp, __signed_stack_001stateMachine
+9	310	354		setout __constVal0, 2, __OnRev_Tmp, 1, __constVal7, 8, __D0stateMachine, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+9	310	377		release __OnRevMutex
+9	8466	378	#line 8466 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	309	378	#line 309 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	309	378	#line 309 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	310	378		mov __signed_stack_001stateMachine, motor_C
+9	309	380	#line 309 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	309	380	#line 309 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	310	380		set __D0stateMachine, 1
+9	310	383	#line 310 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	311	383	#pragma macro 10
+9	311	383		acquire __OnRevMutex
+9	311	384		neg __OnRev_Tmp, __signed_stack_001stateMachine
+9	311	387		setout __constVal2, 2, __OnRev_Tmp, 1, __constVal7, 8, __D0stateMachine, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+9	311	410		release __OnRevMutex
+9	8479	411	#line 8479 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	310	411	#line 310 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	311	411	#line 311 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	311	411	#line 311 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	312	411	#line 312 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	312	411	#line 312 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	312	411	#line 312 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	7921	411	#line 7921 "NXCDefs.h"
+9	7922	411		wait 10
+9	7921	413	#line 7921 "NXCDefs.h"
+9	313	413	#line 313 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	320	413	#line 320 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	321	413		jmp __NXC_Label_848
+9	320	415	#line 320 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	321	415		exit -1, -1
+10	322	0	#line 322 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	323	0		set __filterLightData_7qG2_weight_7qG2_000, 1
+10	322	3	#line 322 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	322	3	#line 322 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	322	3	#line 322 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	323	3	#line 323 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	323	3	#line 323 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	324	3		add __filterLightData_7qG2_i_7qG2_000, __filterLightData_7qG2_index_7qG2_000, __constVal1
+10	323	7	#line 323 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	324	7	#line 324 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	325	7		set __filterLightData_7qG2_sum_7qG2_000, 0
+10	324	10	#line 324 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	326	10	#line 326 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	327	10		set __filterLightData_7qG2_counter_7qG2_000, 10
+10	326	13	#line 326 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	326	13	#line 326 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	327	13		mov __signed_stack_001filterLightData, __filterLightData_7qG2_counter_7qG2_000
+10	326	15	#line 326 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	326	15	#line 326 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	327	15		set __D0filterLightData, 0
+10	326	18	#line 326 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	327	18		cmp 1, __zffilterLightData, __signed_stack_001filterLightData, __D0filterLightData
+10	326	22	#line 326 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	327	22		mov __D0filterLightData, __zffilterLightData
+10	327	24	#line 327 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	328	24		brtst 4, __NXC_Label_908, __zffilterLightData
+10	327	27	#line 327 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	328	27		mov __signed_stack_001filterLightData, __filterLightData_7qG2_index_7qG2_000
+10	327	29	#line 327 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	327	29	#line 327 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	328	29		index __ArrHelper__filterLightData_73_0, __filterLightData_7qG2_data_7qG2_000, __signed_stack_001filterLightData
+10	327	33	#line 327 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	327	33	#line 327 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	327	33	#line 327 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	327	33	#line 327 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	328	33		mul __D0filterLightData, __ArrHelper__filterLightData_73_0, __filterLightData_7qG2_weight_7qG2_000
+10	328	37	#line 328 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	329	37		add __filterLightData_7qG2_sum_7qG2_000, __filterLightData_7qG2_sum_7qG2_000, __D0filterLightData
+10	328	41	#line 328 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	329	41	#line 329 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	330	41		add __filterLightData_7qG2_weight_7qG2_000, __filterLightData_7qG2_weight_7qG2_000, __constVal1
+10	329	45	#line 329 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	329	45	#line 329 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	329	45	#line 329 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	329	45	#line 329 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	329	45	#line 329 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	330	45		add __signed_stack_001filterLightData, __filterLightData_7qG2_i_7qG2_000, __constVal1
+10	329	49	#line 329 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	330	49	#line 330 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	330	49	#line 330 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	331	49		mod __filterLightData_7qG2_i_7qG2_000, __signed_stack_001filterLightData, __constVal10
+10	330	53	#line 330 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	330	53	#line 330 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	331	53	#line 331 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	332	53		sub __filterLightData_7qG2_counter_7qG2_000, __filterLightData_7qG2_counter_7qG2_000, __constVal1
+10	331	57	#line 331 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	333	57	#line 333 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	334	57		jmp __NXC_Label_907
+10	333	59	#line 333 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	333	59	#line 333 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	333	59	#line 333 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	334	59	#line 334 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	334	59	#line 334 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	335	59		div __D0filterLightData, __filterLightData_7qG2_sum_7qG2_000, __constVal55
+10	334	63	#line 334 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	335	63		subret __filterLightData_return
+10	334	65	#line 334 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	339	65	#line 339 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+10	340	65		subret __filterLightData_return
+11	341	0	#line 341 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	342	0		arrinit __getLightData_7qG2_dataLeft_7qG2_000, __constVal0, __constVal10
+11	343	4	#line 343 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	344	4		arrinit __getLightData_7qG2_dataRight_7qG2_000, __constVal0, __constVal10
+11	345	8	#line 345 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	346	8		set __getLightData_7qG2_index_7qG2_000, 0
+11	345	11	#line 345 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	345	11	#line 345 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	346	11		set __D0getLightData, 1
+11	346	14	#line 346 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	347	14		tst 5, __zfgetLightData, __D0getLightData
+11	346	17	#line 346 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	347	17		brtst 4, __NXC_Label_926, __zfgetLightData
+11	346	20	#line 346 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	347	20		mov __signed_stack_001getLightData, __getLightData_7qG2_index_7qG2_000
+11	346	22	#line 346 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	346	22	#line 346 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	347	22		getin __D0getLightData, __constVal3, 4
+11	346	26	#line 346 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	347	26		replace __getLightData_7qG2_dataLeft_7qG2_000, __getLightData_7qG2_dataLeft_7qG2_000, __signed_stack_001getLightData, __D0getLightData
+11	346	31	#line 346 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	346	31	#line 346 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	347	31	#line 347 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	348	31		mov __signed_stack_001getLightData, __getLightData_7qG2_index_7qG2_000
+11	347	33	#line 347 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	347	33	#line 347 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	348	33		getin __D0getLightData, __constVal0, 4
+11	347	37	#line 347 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	348	37		replace __getLightData_7qG2_dataRight_7qG2_000, __getLightData_7qG2_dataRight_7qG2_000, __signed_stack_001getLightData, __D0getLightData
+11	347	42	#line 347 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	347	42	#line 347 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	349	42	#line 349 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	350	42		mov __filterLightData_7qG2_data_7qG2_000, __getLightData_7qG2_dataLeft_7qG2_000
+11	349	44	#line 349 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	350	44		mov __filterLightData_7qG2_index_7qG2_000, __getLightData_7qG2_index_7qG2_000
+11	349	46	#line 349 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	350	46	#line 350 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	351	46		subcall filterLightData, __filterLightData_return
+11	350	48	#line 350 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	351	48		mov leftValue, __D0filterLightData
+11	350	50	#line 350 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	350	50	#line 350 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	350	50	#line 350 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	351	50		mov __filterLightData_7qG2_data_7qG2_000, __getLightData_7qG2_dataRight_7qG2_000
+11	350	52	#line 350 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	351	52		mov __filterLightData_7qG2_index_7qG2_000, __getLightData_7qG2_index_7qG2_000
+11	350	54	#line 350 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	352	54	#line 352 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	353	54		subcall filterLightData, __filterLightData_return
+11	352	56	#line 352 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	353	56		mov rightValue, __D0filterLightData
+11	352	58	#line 352 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	352	58	#line 352 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	352	58	#line 352 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	352	58	#line 352 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	352	58	#line 352 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	352	58	#line 352 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	353	58		add __signed_stack_001getLightData, __getLightData_7qG2_index_7qG2_000, __constVal1
+11	352	62	#line 352 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	354	62	#line 354 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	354	62	#line 354 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	355	62		mod __getLightData_7qG2_index_7qG2_000, __signed_stack_001getLightData, __constVal10
+11	354	66	#line 354 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	354	66	#line 354 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	360	66	#line 360 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	361	66		jmp __NXC_Label_925
+11	360	68	#line 360 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+11	361	68		exit -1, -1
+12	364	0	#line 364 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	365	0		set coefficient, 1
+12	364	3	#line 364 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	364	3	#line 364 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	364	3	#line 364 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	365	3		set __D0getSonarData, 1
+12	366	6	#line 366 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	367	6		tst 5, __zfgetSonarData, __D0getSonarData
+12	366	9	#line 366 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	367	9		brtst 4, __NXC_Label_954, __zfgetSonarData
+12	366	12	#line 366 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	367	12	#pragma macro 26
+12	367	12		acquire __RLSBmutex2
+12	367	13		mov __RLSReadBuf2, __RLSBbufLSWrite1
+12	367	15		set __RLSBytesCount2, 1
+12	367	18		wait 15
+12	367	20		subcall __ReadLSBytes2, ____ReadLSBytes2_return
+12	367	22		index __D0getSonarData, __RLSReadBuf2, 65535
+12	367	26		release __RLSBmutex2
+12	8786	27	#line 8786 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	366	27	#line 366 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	366	27	#line 366 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	366	27	#line 366 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	367	27		div __signed_stack_001getSonarData, __D0getSonarData, __constVal4
+12	366	31	#line 366 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	366	31	#line 366 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	366	31	#line 366 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	366	31	#line 366 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	366	31	#line 366 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	367	31		mul __signed_stack_002getSonarData, __constVal3, distance
+12	366	35	#line 366 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	367	35	#line 367 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	367	35	#line 367 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	368	35		div __D0getSonarData, __signed_stack_002getSonarData, __constVal4
+12	367	39	#line 367 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	368	39		add distance, __signed_stack_001getSonarData, __D0getSonarData
+12	367	43	#line 367 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	367	43	#line 367 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	367	43	#line 367 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	367	43	#line 367 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	367	43	#line 367 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	7921	43	#line 7921 "NXCDefs.h"
+12	7922	43		wait 10
+12	7921	45	#line 7921 "NXCDefs.h"
+12	368	45	#line 368 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	374	45	#line 374 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	375	45		jmp __NXC_Label_953
+12	374	47	#line 374 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+12	375	47		exit -1, -1
+13	387	0	#line 387 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+13	388	0		subret ____initialize_global_data_return
+#CLUMPS
+Clump	Name	Offset	File
+0	main	0	C:\Users\P\AppData\Local\Temp\temp.nxc
+1	__ResetSensorSubroutine	176	NXTDefs.h
+2	__ReadLSBytes2	189	NXTDefs.h
+3	wander	273	C:\Users\P\AppData\Local\Temp\temp.nxc
+4	followLine	561	C:\Users\P\AppData\Local\Temp\temp.nxc
+5	turnLine	656	C:\Users\P\AppData\Local\Temp\temp.nxc
+6	escapeLine	801	C:\Users\P\AppData\Local\Temp\temp.nxc
+7	objectApproach	952	C:\Users\P\AppData\Local\Temp\temp.nxc
+8	objectEscape	1081	C:\Users\P\AppData\Local\Temp\temp.nxc
+9	stateMachine	1142	C:\Users\P\AppData\Local\Temp\temp.nxc
+10	filterLightData	1560	C:\Users\P\AppData\Local\Temp\temp.nxc
+11	getLightData	1627	C:\Users\P\AppData\Local\Temp\temp.nxc
+12	getSonarData	1698	C:\Users\P\AppData\Local\Temp\temp.nxc
+13	__initialize_global_data	1748	C:\Users\P\AppData\Local\Temp\temp.nxc

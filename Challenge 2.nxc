@@ -1,0 +1,385 @@
+/*
+   Cristopher Claeys
+   Chris Villaluz
+   Ju Choe
+   Phil Adriaan
+*/
+
+//Number of samples to store for light filtering
+#define SAMPLE_SIZE 10
+
+//Direction
+#define LEFT 0
+#define RIGHT 1
+
+//Engine states
+#define MOT_LEFT 1
+#define MOT_RIGHT 2
+#define MOT_FWD 3
+#define MOT_REG_REV 4
+#define MOT_REG_FWD 7
+
+//Threshold to distinguish between black and white
+#define THRESHOLD 35
+
+//State constants
+#define WANDER 0
+#define FOLLOW_LINE 1
+#define TURN_LINE 2
+#define ESCAPE_LINE 3
+#define OBJECT_APPROACH 4
+#define OBJECT_ESCAPE 5
+
+//These constants are used in object approach/sonar detection
+#define TOP_SPEED 60
+#define MIN_SPEED 5
+//Sonar value corresponding to ~1"
+#define SENSOR_NEAR 10
+//Sonar value corresponding to ~3'
+#define SENSOR_FAR 91
+
+//The size of the fundamental time step found throughout the program
+#define TIME_STEP 10
+
+//
+//Max time to turn before declaring end of line
+#define TURN_DELAY 1300
+//Amount of time to reset turns
+#define RESET_DELAY 500
+
+//The normal motor speed commonly used
+#define TYP_SPEED 30
+
+//State of the machine: refer
+int state = 0;
+int motor_A;
+int motor_C;
+int light_1;
+int light_4;
+int kp;
+int fwdA;
+int fwdC;
+int wndr_cnt;
+int edge;
+int leftValue; // filtered values
+int rightValue;
+int dir;
+
+//distance recorded by sonar, initial value larger than SENSOR_FAR
+int distance = 100;
+
+//adjusted coefficient from min/max distance
+int coefficient ;
+
+
+/*treat as binary    last bit 1 is A fwd, 0 A rev
+                     second   1 is B fwd, 0 B rev
+                     third    1 is reg,   0 is no reg*/
+int mot;
+
+//Time left to turn
+int turn_time = 0;
+
+//Time left to escape
+int escape_time = 0;
+
+//Time left to reset.
+int reset_count = 0;
+
+/*
+   Wander in a biased random direction.
+*/
+sub wander() {
+   turn_time = 0;
+   if(wndr_cnt){
+      wndr_cnt--;
+   } else {
+      wndr_cnt = Random(150) + 150;
+      if(dir){
+         dir = LEFT;
+         motor_A = TYP_SPEED + 5 + Random(10);
+         motor_C = TYP_SPEED - 5 + Random(10);
+      } else{
+         dir = RIGHT;
+         motor_A = TYP_SPEED - 5 + Random(10);
+         motor_C = TYP_SPEED + 5 + Random(10);
+      }
+   }
+   if(distance <= SENSOR_FAR){
+      state = OBJECT_APPROACH;
+   } else if (leftValue <= THRESHOLD || rightValue <= THRESHOLD) {
+      //This wait is used so the robot does not treat a random dark spot on the mat as a line
+      Wait(150);
+      if (leftValue <= THRESHOLD || rightValue <= THRESHOLD) {
+         state = FOLLOW_LINE;
+      }
+   }
+   mot = MOT_FWD;
+}
+
+/*
+   Follows the black line captured by the light sensor. If the robot strays from the line, it will turn back into the line.
+*/
+sub followLine() {
+   if (reset_count == 0) {
+      turn_time = 0;
+   }
+   else {
+      reset_count -= TIME_STEP;
+   }
+
+   if (leftValue > THRESHOLD) {
+      dir = RIGHT;
+      state = TURN_LINE;
+   } else if (rightValue > THRESHOLD) {
+      dir = LEFT;
+      state = TURN_LINE;
+   } else {
+      // go straight
+      motor_A = TYP_SPEED;
+      motor_C = TYP_SPEED;
+   }
+   if(distance <= SENSOR_FAR){
+      state = OBJECT_APPROACH;
+   }
+   mot = MOT_FWD;
+}
+
+/*
+   Turns the robot towards a certain direction. If it turns too much, it will escape the line.
+*/
+sub turnLine() {
+   reset_count = RESET_DELAY;
+   if(dir) {
+      turn_time += TIME_STEP;
+   } else {
+      turn_time -= TIME_STEP;
+   }
+
+   //Right
+   if(dir) {
+      mot = MOT_RIGHT;
+   } else {
+      mot = MOT_LEFT;
+   }
+   //Without '+2' the robot would often get stuck while turning
+   motor_A = TYP_SPEED + 2;
+   motor_C = TYP_SPEED + 2;
+   if(distance <= SENSOR_FAR){
+      state = OBJECT_APPROACH;
+   } else if (turn_time > TURN_DELAY || turn_time < -TURN_DELAY){
+      escape_time = 1500;
+      state = ESCAPE_LINE;
+   } else if(leftValue <= THRESHOLD && rightValue <= THRESHOLD) {
+      state = FOLLOW_LINE;
+   }
+}
+
+/*
+   Turns back towards the original direction, and escapes the line forward.
+*/
+sub escapeLine() {
+   if(turn_time >= TIME_STEP || turn_time <= -TIME_STEP) {
+      if(turn_time >= TIME_STEP) {
+         mot = MOT_LEFT;
+         turn_time -= TIME_STEP;
+      } else {
+         mot = MOT_RIGHT;
+         turn_time += TIME_STEP;
+      }
+   } else if (escape_time >= TIME_STEP) {
+      escape_time -= TIME_STEP;
+      mot = MOT_FWD;
+   } else {
+      state = WANDER;
+      mot = MOT_FWD;
+   }
+   if(distance <= SENSOR_FAR){
+      state = OBJECT_APPROACH;
+   }
+   motor_A = TYP_SPEED;
+   motor_C = TYP_SPEED;
+   PlayToneEx(1560, 15, 3, FALSE);
+}
+
+/*
+   Approaches a solid object in a speed proportional to the distance from the sonar sensor.
+   Once approached the minimum distance, the robot will play a tune.
+*/
+sub objectApproach() {
+   kp = (distance - SENSOR_NEAR) * coefficient;
+   if (distance <= SENSOR_NEAR) {
+      kp = 0;
+      state = OBJECT_ESCAPE;
+      escape_time = 1000;
+      turn_time = 1000;
+      Off(OUT_AC);
+      PlayFileEx("pacman_death.rso",5,FALSE);
+      Wait(1500);
+   } else if (distance > SENSOR_FAR) {
+      kp = 0;
+      state = WANDER;
+   }
+   motor_A = (TOP_SPEED - MIN_SPEED) * kp / 100 + MIN_SPEED;
+   motor_C = (TOP_SPEED - MIN_SPEED) * kp / 100 + MIN_SPEED;
+   mot = MOT_REG_FWD;
+}
+/*
+   Escapes the object by retreating back and turning to a random direction, then resume to wandering.
+*/
+   sub objectEscape() {
+  if (escape_time >= TIME_STEP) {
+      escape_time -= TIME_STEP;
+      mot = MOT_REG_REV;
+   } else if(turn_time >= TIME_STEP) {
+      //randomize turn direction
+      mot = dir + 1;
+      turn_time -= TIME_STEP;
+   } else {
+      state = WANDER;
+      mot = MOT_REG_FWD;
+   }
+   motor_A = TYP_SPEED;
+   motor_C = TYP_SPEED;
+}
+
+/*
+   Executes a subroutine depending on the  current state.
+*/
+task stateMachine() {
+   // randomized initial direction of wander
+   dir = Random(2) - 1;
+   while(true){
+      switch(state){
+
+         //wander
+         case WANDER:
+            wander();
+         break;
+
+         //basic line following
+         case FOLLOW_LINE:
+            followLine();
+         break;
+
+         //turn for line following
+         case TURN_LINE:
+            turnLine();
+         break;
+
+         //escape black line
+         case ESCAPE_LINE:
+            escapeLine();
+         break;
+
+         //object detected
+         case OBJECT_APPROACH:
+            objectApproach();
+         break;
+
+         //backup/turn
+         case OBJECT_ESCAPE:
+            objectEscape();
+         break;
+
+      }
+      switch(mot) {
+
+         case MOT_LEFT:
+            OnRev(OUT_A, motor_A);
+            OnFwd(OUT_C, motor_C);
+         break;
+
+         case MOT_RIGHT:
+            OnFwd(OUT_A, motor_A);
+            OnRev(OUT_C, motor_C);
+         break;
+
+         case MOT_FWD:
+            OnRev(OUT_A, motor_A);
+            OnRev(OUT_C, motor_C);
+         break;
+
+         case MOT_REG_REV:
+            OnFwdReg(OUT_A, motor_A, OUT_REGMODE_SPEED);
+            OnFwdReg(OUT_C, motor_C, OUT_REGMODE_SPEED);
+         break;
+
+         case MOT_REG_FWD:
+            OnRevReg(OUT_A, motor_A, OUT_REGMODE_SPEED);
+            OnRevReg(OUT_C, motor_C, OUT_REGMODE_SPEED);
+         break;
+      }
+      Wait(TIME_STEP);
+   }
+}
+
+
+/*
+   Filters light sensor data from the stored data
+*/
+int filterLightData(int data[], int index) {
+   int weight = 1;
+   int i = index + 1;
+   int sum = 0;
+   int counter = SAMPLE_SIZE;
+
+   while (counter > 0) {
+      sum += (data[index] * weight);
+      weight++;
+      i = (i + 1) % SAMPLE_SIZE;
+      counter--;
+   }
+   //1+2+3+4+5+6+7+8+9+10, 55 is the coefficient in the weighted average
+   return sum/55;
+}
+
+/*
+   Reads and stores light sensor data
+*/
+task getLightData() {
+   int dataLeft[SAMPLE_SIZE];
+   int dataRight[SAMPLE_SIZE];
+
+   int index = 0;
+
+   while (true) {
+      dataLeft[index] = SensorValue(IN_4);
+      dataRight[index] = SensorValue(IN_1);
+
+      leftValue = filterLightData(dataLeft, index);
+      rightValue = filterLightData(dataRight, index);
+
+      index = (index + 1) % SAMPLE_SIZE;
+
+   }
+}
+
+/*
+   Reads and stores sonar data.
+*/
+task getSonarData() {
+   //Scaling coefficient for object detection
+   coefficient = 100 / (SENSOR_FAR - SENSOR_NEAR);
+
+   while(true) {
+      //A simple moving average filter (xn+1 = 75%xn + 25%IN)
+      distance = SensorUS(IN_3) / 4 + 3 * distance / 4;
+      Wait(TIME_STEP);
+   }
+}
+
+/*
+   Main task.
+*/
+task main() {
+
+   // initialize sensors
+   SetSensorLight(IN_1); //right
+   SetSensorUltrasonic(IN_3);
+   SetSensorLowspeed(IN_3);
+   SetSensorLight(IN_4);
+
+   // start tasks
+   Precedes(stateMachine, getLightData, getSonarData);
+}

@@ -1,0 +1,168 @@
+//SLAVE BOT CODE
+
+#define BT_LINE        1
+#define BUMPER_OUTBOX  2
+#define FLASH_OUTBOX   3
+#define INBOX          5
+
+#define FLASH_SENSOR IN_1
+#define LEFT_BUMPER  IN_2
+#define RIGHT_BUMPER IN_3
+#define LB SENSOR_2
+#define RB SENSOR_3
+
+#define BUMPER_HTI_NONE   0
+#define BUMPER_HIT_LEFT   1
+#define BUMPER_HIT_RIGHT  2
+#define BUMPER_HIT_BOTH   3
+
+#define BUMPER_WAIT 75
+
+#define FLASH_DETECTED 1
+
+#define NUM_SAMPLES 10 //number of light samples
+
+void checkBT(int conn);
+task bumperChecking();
+bool readBumpers();
+task flashChecking();
+void resetSamples();
+void sampleLight();
+int getLightAverage();
+void flashConfig();
+
+bool left_hit, right_hit;
+
+int regular_brightness;
+int flash_brightness;
+int light_samples[NUM_SAMPLES];
+int next;
+
+/**
+* Set up the sensors, and run all the tasks.
+*/
+task main() {
+    checkBT(0);
+
+    // setup light sensor
+    SetSensorType(FLASH_SENSOR,IN_TYPE_LIGHT_INACTIVE);
+    SetSensorMode(FLASH_SENSOR,IN_MODE_PCTFULLSCALE);
+    ResetSensor(FLASH_SENSOR);
+
+    //setup bumpers
+    SetSensorTouch(LEFT_BUMPER);
+    SetSensorTouch(RIGHT_BUMPER);
+
+    Precedes(bumperChecking, flashChecking);
+}
+
+/**
+* Checks to see if the bluetooth connected sucessfully.
+*/
+void checkBT(int conn)
+{
+    if(!BluetoothStatus(conn) == NO_ERR) {
+        TextOut(5, LCD_LINE1, "bluetooth error");
+        Wait(1000);
+        Stop(true);
+    }
+}
+
+/**
+* Checks to see if a bumper has been hit, send the message to the master if it has.
+*/
+task bumperChecking() {
+    left_hit = false;
+    right_hit = false;
+
+    while(TRUE) {
+        left_hit = false;
+        right_hit = false;
+
+        if(readBumpers()) {
+          Wait(BUMPER_WAIT); // give it a little bit to see if both were hit
+          readBumpers();
+        }
+
+        //send messages
+        if(left_hit && right_hit) {
+            TextOut(5, LCD_LINE6, "both    ");
+            SendRemoteNumber(0, BUMPER_OUTBOX, BUMPER_HIT_BOTH);
+        }
+        else if(left_hit && !right_hit) {
+            TextOut(5, LCD_LINE6, "left    ");
+            SendRemoteNumber(0, BUMPER_OUTBOX, BUMPER_HIT_LEFT);
+        }
+        else if(!left_hit && right_hit) {
+            TextOut(5, LCD_LINE6, "right    ");
+            SendRemoteNumber(0, BUMPER_OUTBOX, BUMPER_HIT_RIGHT);
+        }
+        else {
+            TextOut(5, LCD_LINE6, "none    ");
+        }
+        Wait(15);
+    }
+}
+
+/**
+* If the bumper has been hit, set their associated variables.
+*/
+bool readBumpers() {
+    if(RB == 1)
+        right_hit = true;
+    if(LB == 1)
+        left_hit = true;
+
+    return left_hit || right_hit;
+}
+
+/**
+* Checks to see if a light was flashed on the robot, send a message to the master if it has.
+*/
+task flashChecking() {
+    flash_brightness = 100;
+    resetSamples();
+
+    while(TRUE) {
+        sampleLight();
+        TextOut(10, LCD_LINE4, "avg: " + NumToStr(getLightAverage()) + "    ");
+        if(getLightAverage() >= 65) {
+            SendRemoteNumber(0, FLASH_OUTBOX, FLASH_DETECTED);
+            resetSamples();
+            Wait(250);
+        }
+    }
+}
+
+/**
+* Resets the samples being read in the light value.
+*/
+void resetSamples() {
+    int i;
+    for(i = 0 ; i < NUM_SAMPLES ; i++)
+        light_samples[i] = regular_brightness;
+    next = 0;
+}
+
+void sampleLight() {
+    light_samples[next] = Sensor(FLASH_SENSOR);
+    next = (next+1) % NUM_SAMPLES;
+}
+
+// this is using a weighted average, that might need to change.
+int getLightAverage() {
+    long i;
+    long total = 0;
+    long divisor = 0;
+    int position = next;
+
+    for(i = 1 ; i <= NUM_SAMPLES ; i++) {
+        divisor += i;
+        total += light_samples[position] * i;
+        position = (position+1) % NUM_SAMPLES;
+    }
+
+    return total / divisor;
+}
+
+

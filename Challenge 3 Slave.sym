@@ -1,0 +1,873 @@
+#SYMBOLS
+Index	Identifier	Type	Flag	Data	Size	RefCount
+0	__D0resetSamples	6	1	0	4	5
+1	__DU0readBumpers	5	1	4	4	7
+2	__D0sampleLight	6	1	8	4	2
+3	__signed_stack_002bumperChecking	6	1	12	4	8
+4	__signed_stack_001bumperChecking	6	1	16	4	14
+5	__D0readBumpers	6	1	20	4	10
+6	__DU0bumperChecking	5	1	24	4	15
+7	__D0bumperChecking	6	1	28	4	24
+8	__D0checkBT	6	1	32	4	6
+9	__D0getLightAverage	6	1	36	4	8
+10	__D0flashChecking	6	1	40	4	10
+11	__signed_stack_001checkBT	6	1	44	4	4
+12	__Wait_7qG2_ms_7qG2_000_inline_bumperChecking	5	1	48	4	2
+13	__signed_stack_001sampleLight	6	1	52	4	4
+14	__getLightAverage_7qG2_i_7qG2_000	6	1	56	4	6
+15	__getLightAverage_7qG2_divisor_7qG2_000	6	1	60	4	4
+16	__getLightAverage_7qG2_total_7qG2_000	6	1	64	4	4
+17	__signed_stack_001resetSamples	6	1	68	4	4
+18	__signed_stack_001flashChecking	6	1	72	4	4
+19	__signed_stack_002checkBT	6	1	76	4	2
+20	__signed_stack_002flashChecking	6	1	80	4	2
+21	__signed_stack_001readBumpers	6	1	84	4	6
+22	__signed_stack_001getLightAverage	6	1	88	4	6
+23	__CHSWMutex	9	0	92	4	8
+24	__CBTWMutex	9	0	96	4	8
+25	__RemoteMutex	9	0	100	4	8
+26	__TextOutMutex	9	0	104	4	12
+27	__SRSTmpLongVal	6	1	108	4	8
+28	__checkBT_7qG2_conn_7qG2_000	4	1	112	2	2
+29	next	4	1	114	2	5
+30	regular_brightness	4	1	116	2	1
+31	__ArrHelper__getLightAverage_73_0	4	1	118	2	2
+32	__getLightAverage_7qG2_position_7qG2_000	4	1	120	2	4
+33	__resetSamples_7qG2_i_7qG2_000	4	1	122	2	5
+34	____initialize_global_data_return	1	1	124	1	3
+35	__checkBT_return	1	1	125	1	3
+36	__constVal5	2	0	126	1	4
+37	__ResetSensorPort	1	1	127	1	5
+38	__constVal4	2	0	128	1	8
+39	right_hit	1	1	129	1	8
+40	left_hit	1	1	130	1	8
+41	__SetSensorType_7qG2_port_7qG2_000_inline_main	1	1	131	1	2
+42	__getLightAverage_return	1	1	132	1	5
+43	__sampleLight_return	1	1	133	1	3
+44	__resetSamples_return	1	1	134	1	4
+45	__constVal32	2	0	135	1	2
+46	__constVal1	2	0	136	1	10
+47	__constVal0	2	1	137	1	15
+48	__SetSensorMode_7qG2_mode_7qG2_000_inline_main	1	1	138	1	2
+49	__SetSensorMode_7qG2_port_7qG2_000_inline_main	1	1	139	1	2
+50	__SetSensorType_7qG2_type_7qG2_000_inline_main	1	1	140	1	2
+51	__constVal3	2	0	141	1	6
+52	__readBumpers_return	1	1	142	1	5
+53	__SetSensorTouch_7qG2_port_7qG2_000_inline_main	1	1	143	1	8
+54	__ResetSensorTmp	1	1	144	1	2
+55	__zfgetLightAverage	1	1	145	1	3
+56	__zfreadBumpers	1	1	146	1	11
+57	__WFRRTmpByte	1	1	147	1	8
+58	__zfcheckBT	1	1	148	1	3
+59	__zfflashChecking	1	1	149	1	5
+60	__zfbumperChecking	1	1	150	1	25
+61	__zfresetSamples	1	1	151	1	3
+62	__constVal10	2	0	152	1	3
+63	__constVal2	2	0	153	1	9
+64	____ResetSensorSubroutine_return	1	1	154	1	5
+65	__CHSWArgs	8	0	2	8	12
+66	__CHSWArgs.Status	2	1	156	1	12
+67	__CHSWArgs.Buffer	7	0	158	4	12
+68	__CHSWArgs.Buffer.Buffer_type	1	0	0	1	0
+69	__TextOutArgs	8	0	4	16	36
+70	__TextOutArgs.Result	2	1	160	1	36
+71	__TextOutArgs.Location	8	0	2	4	36
+72	__TextOutArgs.Location.X	4	1	164	2	36
+73	__TextOutArgs.Location.Y	4	1	166	2	36
+74	__TextOutArgs.Text	7	0	168	4	36
+75	__TextOutArgs.Text.Text_type	1	0	0	1	0
+76	__TextOutArgs.Options	5	1	172	4	36
+77	__CBTWArgs	8	0	3	8	16
+78	__CBTWArgs.Result	2	1	176	1	16
+79	__CBTWArgs.Connection	1	1	177	1	16
+80	__CBTWArgs.Buffer	7	0	178	4	16
+81	__CBTWArgs.Buffer.Buffer_type	1	0	0	1	0
+82	__CBTCSArgs	8	0	2	4	4
+83	__CBTCSArgs.Result	2	1	180	1	4
+84	__CBTCSArgs.Connection	1	1	181	1	4
+85	__constStr0014	7	0	182	4	1
+86	__constStr0014.__constStr0014_type	1	1	0	1	0
+87	__strbufbumperChecking	7	0	184	4	8
+88	__strbufbumperChecking.__strbufbumperChecking_type	1	0	0	1	0
+89	__constStr0013	7	0	186	4	1
+90	__constStr0013.__constStr0013_type	1	1	0	1	0
+91	__ArrHelper__flashChecking_244_1	7	0	188	4	4
+92	__ArrHelper__flashChecking_244_1.__ArrHelper__flashChecking_244_1_type	1	0	0	1	0
+93	__ArrHelper__flashChecking_244_0	7	0	190	4	2
+94	__ArrHelper__flashChecking_244_0.__ArrHelper__flashChecking_244_0_type	1	0	0	1	0
+95	__ArrHelper__flashChecking_244_2	7	0	192	4	2
+96	__ArrHelper__flashChecking_244_2.__ArrHelper__flashChecking_244_2_type	1	0	0	1	0
+97	__DCMessageWritePacket	7	0	194	4	4
+98	__DCMessageWritePacket.__DCMessageWritePacket_type	1	0	0	1	0
+99	__constStr0015	7	0	196	4	1
+100	__constStr0015.__constStr0015_type	1	1	0	1	0
+101	__strretvalflashChecking	7	0	198	4	2
+102	__strretvalflashChecking.__strretvalflashChecking_type	1	0	0	1	0
+103	__strbufflashChecking	7	0	200	4	6
+104	__strbufflashChecking.__strbufflashChecking_type	1	0	0	1	0
+105	__SRSSendBuf	7	0	202	4	12
+106	__SRSSendBuf.__SRSSendBuf_type	1	0	0	1	0
+107	light_samples	7	0	204	4	6
+108	light_samples.light_samples_type	4	0	0	2	0
+109	__SRSTmpBuf	7	0	206	4	24
+110	__SRSTmpBuf.__SRSTmpBuf_type	1	0	0	1	0
+111	__SRSFlattenBuf	7	0	208	4	8
+112	__SRSFlattenBuf.__SRSFlattenBuf_type	1	0	0	1	0
+113	__constStr0011	7	0	210	4	1
+114	__constStr0011.__constStr0011_type	1	1	0	1	0
+115	__constStr0012	7	0	212	4	1
+116	__constStr0012.__constStr0012_type	1	1	0	1	0
+117	__constStr0010	7	0	214	4	1
+118	__constStr0010.__constStr0010_type	1	1	0	1	0
+119	__constStr0009	7	0	216	4	1
+120	__constStr0009.__constStr0009_type	1	1	0	1	0
+121	__strbufcheckBT	7	0	218	4	2
+122	__strbufcheckBT.__strbufcheckBT_type	1	0	0	1	0
+#SOURCES
+Clump	Line	PC	Source
+0	44	0	#line 44 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	45	0		subcall __initialize_global_data, ____initialize_global_data_return
+0	44	2	#line 44 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	44	2	#line 44 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	45	2		set __checkBT_7qG2_conn_7qG2_000, 0
+0	44	5	#line 44 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	47	5	#line 47 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	48	5		subcall checkBT, __checkBT_return
+0	47	7	#line 47 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	47	7	#line 47 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	48	7		set __SetSensorType_7qG2_port_7qG2_000_inline_main, 0
+0	47	10	#line 47 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	47	10	#line 47 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	48	10		set __SetSensorType_7qG2_type_7qG2_000_inline_main, 6
+0	47	13	#line 47 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	3663	13	#line 3663 "NXCDefs.h"
+0	3664	13		setin __SetSensorType_7qG2_type_7qG2_000_inline_main, __SetSensorType_7qG2_port_7qG2_000_inline_main, 0
+0	3663	17	#line 3663 "NXCDefs.h"
+0	48	17	#line 48 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	48	17	#line 48 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	49	17		set __SetSensorMode_7qG2_port_7qG2_000_inline_main, 0
+0	48	20	#line 48 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	48	20	#line 48 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	49	20		set __SetSensorMode_7qG2_mode_7qG2_000_inline_main, 128
+0	48	23	#line 48 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	3676	23	#line 3676 "NXCDefs.h"
+0	3677	23		setin __SetSensorMode_7qG2_mode_7qG2_000_inline_main, __SetSensorMode_7qG2_port_7qG2_000_inline_main, 1
+0	3676	27	#line 3676 "NXCDefs.h"
+0	49	27	#line 49 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	49	27	#line 49 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	49	27	#line 49 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	3694	27	#line 3694 "NXCDefs.h"
+0	3695	27	#pragma macro 4
+0	3695	27		mov __ResetSensorPort, __constVal0
+0	3695	29		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+0	6981	31	#line 6981 "NXCDefs.h"
+0	3694	31	#line 3694 "NXCDefs.h"
+0	52	31	#line 52 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	52	31	#line 52 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	53	31		set __SetSensorTouch_7qG2_port_7qG2_000_inline_main, 1
+0	52	34	#line 52 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	3718	34	#line 3718 "NXCDefs.h"
+0	3719	34	#pragma macro 6
+0	3719	34		setin __constVal1, __SetSensorTouch_7qG2_port_7qG2_000_inline_main, 0
+0	3719	38		setin __constVal32, __SetSensorTouch_7qG2_port_7qG2_000_inline_main, 1
+0	3719	42		mov __ResetSensorPort, __SetSensorTouch_7qG2_port_7qG2_000_inline_main
+0	3719	44		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+0	6995	46	#line 6995 "NXCDefs.h"
+0	3718	46	#line 3718 "NXCDefs.h"
+0	53	46	#line 53 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	53	46	#line 53 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	54	46		set __SetSensorTouch_7qG2_port_7qG2_000_inline_main, 2
+0	53	49	#line 53 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	3718	49	#line 3718 "NXCDefs.h"
+0	3719	49	#pragma macro 6
+0	3719	49		setin __constVal1, __SetSensorTouch_7qG2_port_7qG2_000_inline_main, 0
+0	3719	53		setin __constVal32, __SetSensorTouch_7qG2_port_7qG2_000_inline_main, 1
+0	3719	57		mov __ResetSensorPort, __SetSensorTouch_7qG2_port_7qG2_000_inline_main
+0	3719	59		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+0	7005	61	#line 7005 "NXCDefs.h"
+0	3718	61	#line 3718 "NXCDefs.h"
+0	55	61	#line 55 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	56	61	#line 56 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	56	61	#line 56 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+0	57	61		exit 0, 1
+1	4885	0		setin __constVal1, __ResetSensorPort, 5
+1	4887	4		getin __ResetSensorTmp, __ResetSensorPort, 5
+1	4888	8		brtst 5, __SensorStillInvalid, __ResetSensorTmp
+1	4889	11		subret ____ResetSensorSubroutine_return
+2	63	0	#line 63 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	64	0	#pragma macro 5
+2	64	0		mov __CBTCSArgs.Connection, __checkBT_7qG2_conn_7qG2_000
+2	64	2		syscall 28, __CBTCSArgs
+2	7015	5	#line 7015 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	63	5	#line 63 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	64	5		not __signed_stack_001checkBT, __CBTCSArgs.Result
+2	63	8	#line 63 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	63	8	#line 63 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	64	8		set __D0checkBT, 0
+2	63	11	#line 63 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	64	11		cmp 4, __zfcheckBT, __signed_stack_001checkBT, __D0checkBT
+2	63	15	#line 63 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	64	15		mov __D0checkBT, __zfcheckBT
+2	64	17	#line 64 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	65	17		brtst 4, __NXC_Label_622, __zfcheckBT
+2	64	20	#line 64 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	65	20		set __signed_stack_001checkBT, 5
+2	64	23	#line 64 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	64	23	#line 64 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	65	23		set __signed_stack_002checkBT, 56
+2	64	26	#line 64 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	64	26	#line 64 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	65	26		strcat __strbufcheckBT, __constStr0009
+2	65	30	#line 65 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	66	30		acquire __TextOutMutex
+2	65	31	#line 65 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	66	31		mov __TextOutArgs.Location.X, __signed_stack_001checkBT
+2	65	33	#line 65 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	66	33		mov __TextOutArgs.Location.Y, __signed_stack_002checkBT
+2	65	35	#line 65 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	66	35		set __TextOutArgs.Options, 0
+2	65	38	#line 65 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	66	38		mov __TextOutArgs.Text, __strbufcheckBT
+2	65	40	#line 65 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	66	40		syscall 13, __TextOutArgs
+2	65	43	#line 65 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	66	43		mov __D0checkBT, __TextOutArgs.Result
+2	65	45	#line 65 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	66	45		release __TextOutMutex
+2	65	46	#line 65 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	65	46	#line 65 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	65	46	#line 65 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	7921	46	#line 7921 "NXCDefs.h"
+2	7922	46		wait 1000
+2	7921	48	#line 7921 "NXCDefs.h"
+2	66	48	#line 66 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	66	48	#line 66 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	67	48		set __D0checkBT, 1
+2	67	51	#line 67 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	68	51		stop __D0checkBT
+2	67	53	#line 67 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	73	53	#line 73 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	73	53	#line 73 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+2	74	53		subret __checkBT_return
+3	75	0	#line 75 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	76	0		set left_hit, 0
+3	75	3	#line 75 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	75	3	#line 75 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	77	3	#line 77 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	78	3		set right_hit, 0
+3	77	6	#line 77 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	77	6	#line 77 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	77	6	#line 77 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	78	6		set __D0bumperChecking, 1
+3	78	9	#line 78 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	79	9		tst 5, __zfbumperChecking, __D0bumperChecking
+3	78	12	#line 78 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	79	12		brtst 4, __NXC_Label_636, __zfbumperChecking
+3	79	15	#line 79 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	80	15		set left_hit, 0
+3	79	18	#line 79 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	79	18	#line 79 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	81	18	#line 81 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	82	18		set right_hit, 0
+3	81	21	#line 81 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	81	21	#line 81 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	81	21	#line 81 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	82	21		subcall readBumpers, __readBumpers_return
+3	81	23	#line 81 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	82	23		mov __DU0bumperChecking, __DU0readBumpers
+3	82	25	#line 82 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	83	25		tst 5, __zfbumperChecking, __DU0bumperChecking
+3	82	28	#line 82 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	83	28		brtst 4, __NXC_Label_645, __zfbumperChecking
+3	82	31	#line 82 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	83	31		set __Wait_7qG2_ms_7qG2_000_inline_bumperChecking, 75
+3	82	34	#line 82 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	7921	34	#line 7921 "NXCDefs.h"
+3	7922	34		wait 75
+3	7921	36	#line 7921 "NXCDefs.h"
+3	83	36	#line 83 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	84	36	#line 84 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	85	36		subcall readBumpers, __readBumpers_return
+3	84	38	#line 84 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	85	38		mov __DU0bumperChecking, __DU0readBumpers
+3	84	40	#line 84 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	87	40	#line 87 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	87	40	#line 87 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	88	40		mov __DU0bumperChecking, left_hit
+3	87	42	#line 87 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	88	42		tst 5, __zfbumperChecking, __DU0bumperChecking
+3	87	45	#line 87 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	88	45		mov __D0bumperChecking, __zfbumperChecking
+3	87	47	#line 87 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	88	47		brtst 4, __NXC_Label_649, __zfbumperChecking
+3	87	50	#line 87 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	88	50		mov __signed_stack_001bumperChecking, __D0bumperChecking
+3	87	52	#line 87 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	88	52		mov __DU0bumperChecking, right_hit
+3	87	54	#line 87 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	88	54		tst 5, __zfbumperChecking, __DU0bumperChecking
+3	87	57	#line 87 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	87	57	#line 87 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	88	57		and __D0bumperChecking, __signed_stack_001bumperChecking, __zfbumperChecking
+3	88	61	#line 88 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	89	61		tst 5, __zfbumperChecking, __D0bumperChecking
+3	88	64	#line 88 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	89	64		brtst 4, __NXC_Label_650, __zfbumperChecking
+3	88	67	#line 88 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	89	67		set __signed_stack_001bumperChecking, 5
+3	88	70	#line 88 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	88	70	#line 88 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	89	70		set __signed_stack_002bumperChecking, 16
+3	88	73	#line 88 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	88	73	#line 88 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	89	73		strcat __strbufbumperChecking, __constStr0010
+3	89	77	#line 89 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	90	77		acquire __TextOutMutex
+3	89	78	#line 89 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	90	78		mov __TextOutArgs.Location.X, __signed_stack_001bumperChecking
+3	89	80	#line 89 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	90	80		mov __TextOutArgs.Location.Y, __signed_stack_002bumperChecking
+3	89	82	#line 89 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	90	82		set __TextOutArgs.Options, 0
+3	89	85	#line 89 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	90	85		mov __TextOutArgs.Text, __strbufbumperChecking
+3	89	87	#line 89 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	90	87		syscall 13, __TextOutArgs
+3	89	90	#line 89 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	90	90		mov __D0bumperChecking, __TextOutArgs.Result
+3	89	92	#line 89 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	90	92		release __TextOutMutex
+3	89	93	#line 89 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	89	93	#line 89 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	90	93	#pragma macro 25
+3	90	93		acquire __RemoteMutex
+3	90	94		mov __SRSTmpBuf, __DCMessageWritePacket
+3	90	96		replace __SRSTmpBuf, __SRSTmpBuf, __constVal2, __constVal2
+3	90	101		replace __SRSTmpBuf, __SRSTmpBuf, __constVal3, __constVal5
+3	90	106		mov __SRSTmpLongVal, __constVal3
+3	90	108		flatten __SRSFlattenBuf, __SRSTmpLongVal
+3	90	111		arrbuild __SRSSendBuf, __SRSTmpBuf, __SRSFlattenBuf
+3	90	116		brcmp 0, __ConnWrite_Else0, __constVal0, __constVal4
+3	90	120		acquire __CHSWMutex
+3	90	121		sub __WFRRTmpByte, __constVal0, __constVal4
+3	90	125		arrbuild __CHSWArgs.Buffer, __WFRRTmpByte, __SRSSendBuf
+3	90	130		syscall 37, __CHSWArgs
+3	90	133		mov __D0bumperChecking, __CHSWArgs.Status
+3	90	135		release __CHSWMutex
+3	90	136		jmp __ConnWrite_EndIf0
+3	90	138		acquire __CBTWMutex
+3	90	139		mov __CBTWArgs.Connection, __constVal0
+3	90	141		mov __CBTWArgs.Buffer, __SRSSendBuf
+3	90	143		syscall 29, __CBTWArgs
+3	90	146		mov __D0bumperChecking, __CBTWArgs.Result
+3	90	148		release __CBTWMutex
+3	90	149		release __RemoteMutex
+3	7213	150	#line 7213 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	89	150	#line 89 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	89	150	#line 89 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	91	150	#line 91 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	92	150		jmp __NXC_Label_655
+3	91	152	#line 91 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	92	152		mov __DU0bumperChecking, left_hit
+3	91	154	#line 91 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	92	154		tst 5, __zfbumperChecking, __DU0bumperChecking
+3	91	157	#line 91 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	92	157		mov __D0bumperChecking, __zfbumperChecking
+3	91	159	#line 91 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	92	159		brtst 4, __NXC_Label_657, __zfbumperChecking
+3	91	162	#line 91 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	92	162		mov __signed_stack_001bumperChecking, __D0bumperChecking
+3	91	164	#line 91 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	91	164	#line 91 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	92	164		not __DU0bumperChecking, right_hit
+3	91	167	#line 91 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	92	167		tst 5, __zfbumperChecking, __DU0bumperChecking
+3	91	170	#line 91 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	91	170	#line 91 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	92	170		and __D0bumperChecking, __signed_stack_001bumperChecking, __zfbumperChecking
+3	92	174	#line 92 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	93	174		tst 5, __zfbumperChecking, __D0bumperChecking
+3	92	177	#line 92 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	93	177		brtst 4, __NXC_Label_658, __zfbumperChecking
+3	92	180	#line 92 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	93	180		set __signed_stack_001bumperChecking, 5
+3	92	183	#line 92 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	92	183	#line 92 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	93	183		set __signed_stack_002bumperChecking, 16
+3	92	186	#line 92 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	92	186	#line 92 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	93	186		strcat __strbufbumperChecking, __constStr0011
+3	93	190	#line 93 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	94	190		acquire __TextOutMutex
+3	93	191	#line 93 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	94	191		mov __TextOutArgs.Location.X, __signed_stack_001bumperChecking
+3	93	193	#line 93 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	94	193		mov __TextOutArgs.Location.Y, __signed_stack_002bumperChecking
+3	93	195	#line 93 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	94	195		set __TextOutArgs.Options, 0
+3	93	198	#line 93 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	94	198		mov __TextOutArgs.Text, __strbufbumperChecking
+3	93	200	#line 93 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	94	200		syscall 13, __TextOutArgs
+3	93	203	#line 93 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	94	203		mov __D0bumperChecking, __TextOutArgs.Result
+3	93	205	#line 93 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	94	205		release __TextOutMutex
+3	93	206	#line 93 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	93	206	#line 93 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	94	206	#pragma macro 25
+3	94	206		acquire __RemoteMutex
+3	94	207		mov __SRSTmpBuf, __DCMessageWritePacket
+3	94	209		replace __SRSTmpBuf, __SRSTmpBuf, __constVal2, __constVal2
+3	94	214		replace __SRSTmpBuf, __SRSTmpBuf, __constVal3, __constVal5
+3	94	219		mov __SRSTmpLongVal, __constVal1
+3	94	221		flatten __SRSFlattenBuf, __SRSTmpLongVal
+3	94	224		arrbuild __SRSSendBuf, __SRSTmpBuf, __SRSFlattenBuf
+3	94	229		brcmp 0, __ConnWrite_Else1, __constVal0, __constVal4
+3	94	233		acquire __CHSWMutex
+3	94	234		sub __WFRRTmpByte, __constVal0, __constVal4
+3	94	238		arrbuild __CHSWArgs.Buffer, __WFRRTmpByte, __SRSSendBuf
+3	94	243		syscall 37, __CHSWArgs
+3	94	246		mov __D0bumperChecking, __CHSWArgs.Status
+3	94	248		release __CHSWMutex
+3	94	249		jmp __ConnWrite_EndIf1
+3	94	251		acquire __CBTWMutex
+3	94	252		mov __CBTWArgs.Connection, __constVal0
+3	94	254		mov __CBTWArgs.Buffer, __SRSSendBuf
+3	94	256		syscall 29, __CBTWArgs
+3	94	259		mov __D0bumperChecking, __CBTWArgs.Result
+3	94	261		release __CBTWMutex
+3	94	262		release __RemoteMutex
+3	7277	263	#line 7277 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	93	263	#line 93 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	93	263	#line 93 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	95	263	#line 95 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	96	263		jmp __NXC_Label_663
+3	95	265	#line 95 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	95	265	#line 95 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	96	265		not __DU0bumperChecking, left_hit
+3	95	268	#line 95 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	96	268		tst 5, __zfbumperChecking, __DU0bumperChecking
+3	95	271	#line 95 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	96	271		mov __D0bumperChecking, __zfbumperChecking
+3	95	273	#line 95 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	96	273		brtst 4, __NXC_Label_665, __zfbumperChecking
+3	95	276	#line 95 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	96	276		mov __signed_stack_001bumperChecking, __D0bumperChecking
+3	95	278	#line 95 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	96	278		mov __DU0bumperChecking, right_hit
+3	95	280	#line 95 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	96	280		tst 5, __zfbumperChecking, __DU0bumperChecking
+3	95	283	#line 95 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	95	283	#line 95 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	96	283		and __D0bumperChecking, __signed_stack_001bumperChecking, __zfbumperChecking
+3	96	287	#line 96 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	97	287		tst 5, __zfbumperChecking, __D0bumperChecking
+3	96	290	#line 96 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	97	290		brtst 4, __NXC_Label_666, __zfbumperChecking
+3	96	293	#line 96 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	97	293		set __signed_stack_001bumperChecking, 5
+3	96	296	#line 96 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	96	296	#line 96 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	97	296		set __signed_stack_002bumperChecking, 16
+3	96	299	#line 96 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	96	299	#line 96 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	97	299		strcat __strbufbumperChecking, __constStr0012
+3	97	303	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	98	303		acquire __TextOutMutex
+3	97	304	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	98	304		mov __TextOutArgs.Location.X, __signed_stack_001bumperChecking
+3	97	306	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	98	306		mov __TextOutArgs.Location.Y, __signed_stack_002bumperChecking
+3	97	308	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	98	308		set __TextOutArgs.Options, 0
+3	97	311	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	98	311		mov __TextOutArgs.Text, __strbufbumperChecking
+3	97	313	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	98	313		syscall 13, __TextOutArgs
+3	97	316	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	98	316		mov __D0bumperChecking, __TextOutArgs.Result
+3	97	318	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	98	318		release __TextOutMutex
+3	97	319	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	97	319	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	98	319	#pragma macro 25
+3	98	319		acquire __RemoteMutex
+3	98	320		mov __SRSTmpBuf, __DCMessageWritePacket
+3	98	322		replace __SRSTmpBuf, __SRSTmpBuf, __constVal2, __constVal2
+3	98	327		replace __SRSTmpBuf, __SRSTmpBuf, __constVal3, __constVal5
+3	98	332		mov __SRSTmpLongVal, __constVal2
+3	98	334		flatten __SRSFlattenBuf, __SRSTmpLongVal
+3	98	337		arrbuild __SRSSendBuf, __SRSTmpBuf, __SRSFlattenBuf
+3	98	342		brcmp 0, __ConnWrite_Else2, __constVal0, __constVal4
+3	98	346		acquire __CHSWMutex
+3	98	347		sub __WFRRTmpByte, __constVal0, __constVal4
+3	98	351		arrbuild __CHSWArgs.Buffer, __WFRRTmpByte, __SRSSendBuf
+3	98	356		syscall 37, __CHSWArgs
+3	98	359		mov __D0bumperChecking, __CHSWArgs.Status
+3	98	361		release __CHSWMutex
+3	98	362		jmp __ConnWrite_EndIf2
+3	98	364		acquire __CBTWMutex
+3	98	365		mov __CBTWArgs.Connection, __constVal0
+3	98	367		mov __CBTWArgs.Buffer, __SRSSendBuf
+3	98	369		syscall 29, __CBTWArgs
+3	98	372		mov __D0bumperChecking, __CBTWArgs.Result
+3	98	374		release __CBTWMutex
+3	98	375		release __RemoteMutex
+3	7341	376	#line 7341 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	97	376	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	97	376	#line 97 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	100	376	#line 100 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	101	376		jmp __NXC_Label_671
+3	100	378	#line 100 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	101	378		set __signed_stack_001bumperChecking, 5
+3	100	381	#line 100 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	100	381	#line 100 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	101	381		set __signed_stack_002bumperChecking, 16
+3	100	384	#line 100 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	100	384	#line 100 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	101	384		strcat __strbufbumperChecking, __constStr0013
+3	101	388	#line 101 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	102	388		acquire __TextOutMutex
+3	101	389	#line 101 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	102	389		mov __TextOutArgs.Location.X, __signed_stack_001bumperChecking
+3	101	391	#line 101 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	102	391		mov __TextOutArgs.Location.Y, __signed_stack_002bumperChecking
+3	101	393	#line 101 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	102	393		set __TextOutArgs.Options, 0
+3	101	396	#line 101 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	102	396		mov __TextOutArgs.Text, __strbufbumperChecking
+3	101	398	#line 101 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	102	398		syscall 13, __TextOutArgs
+3	101	401	#line 101 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	102	401		mov __D0bumperChecking, __TextOutArgs.Result
+3	101	403	#line 101 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	102	403		release __TextOutMutex
+3	101	404	#line 101 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	102	404	#line 102 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	102	404	#line 102 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	102	404	#line 102 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	102	404	#line 102 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	103	404		set __Wait_7qG2_ms_7qG2_000_inline_bumperChecking, 15
+3	102	407	#line 102 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	7921	407	#line 7921 "NXCDefs.h"
+3	7922	407		wait 15
+3	7921	409	#line 7921 "NXCDefs.h"
+3	103	409	#line 103 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	109	409	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	110	409		jmp __NXC_Label_635
+3	109	411	#line 109 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+3	110	411		exit -1, -1
+4	110	0	#line 110 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	111	0		getin __signed_stack_001readBumpers, __constVal2, 4
+4	110	4	#line 110 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	111	4	#line 111 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	112	4		set __D0readBumpers, 1
+4	111	7	#line 111 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	112	7		cmp 4, __zfreadBumpers, __signed_stack_001readBumpers, __D0readBumpers
+4	111	11	#line 111 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	112	11		mov __D0readBumpers, __zfreadBumpers
+4	111	13	#line 111 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	112	13		brtst 4, __NXC_Label_680, __zfreadBumpers
+4	112	16	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	113	16		set right_hit, 1
+4	112	19	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	112	19	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	112	19	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	112	19	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	113	19		getin __signed_stack_001readBumpers, __constVal1, 4
+4	112	23	#line 112 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	113	23	#line 113 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	114	23		set __D0readBumpers, 1
+4	113	26	#line 113 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	114	26		cmp 4, __zfreadBumpers, __signed_stack_001readBumpers, __D0readBumpers
+4	113	30	#line 113 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	114	30		mov __D0readBumpers, __zfreadBumpers
+4	113	32	#line 113 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	114	32		brtst 4, __NXC_Label_685, __zfreadBumpers
+4	115	35	#line 115 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	116	35		set left_hit, 1
+4	115	38	#line 115 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	115	38	#line 115 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	115	38	#line 115 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	115	38	#line 115 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	116	38		mov __DU0readBumpers, left_hit
+4	115	40	#line 115 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	116	40		tst 5, __zfreadBumpers, __DU0readBumpers
+4	115	43	#line 115 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	116	43		mov __D0readBumpers, __zfreadBumpers
+4	115	45	#line 115 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	116	45		brtst 5, __NXC_Label_688, __zfreadBumpers
+4	115	48	#line 115 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	116	48		mov __signed_stack_001readBumpers, __D0readBumpers
+4	116	50	#line 116 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	117	50		mov __DU0readBumpers, right_hit
+4	116	52	#line 116 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	117	52		tst 5, __zfreadBumpers, __DU0readBumpers
+4	116	55	#line 116 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	116	55	#line 116 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	117	55		or __D0readBumpers, __signed_stack_001readBumpers, __zfreadBumpers
+4	116	59	#line 116 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	117	59		mov __DU0readBumpers, __D0readBumpers
+4	116	61	#line 116 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	117	61		subret __readBumpers_return
+4	116	63	#line 116 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	121	63	#line 121 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+4	122	63		subret __readBumpers_return
+5	123	0	#line 123 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	123	0	#line 123 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	123	0	#line 123 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	125	0	#line 125 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	126	0		subcall resetSamples, __resetSamples_return
+5	125	2	#line 125 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	125	2	#line 125 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	126	2		set __D0flashChecking, 1
+5	126	5	#line 126 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	127	5		tst 5, __zfflashChecking, __D0flashChecking
+5	126	8	#line 126 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	127	8		brtst 4, __NXC_Label_694, __zfflashChecking
+5	127	11	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	128	11		subcall sampleLight, __sampleLight_return
+5	127	13	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	127	13	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	128	13		set __signed_stack_001flashChecking, 10
+5	127	16	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	127	16	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	128	16		set __signed_stack_002flashChecking, 32
+5	127	19	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	127	19	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	128	19		mov __ArrHelper__flashChecking_244_0, __constStr0014
+5	127	21	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	128	21		subcall getLightAverage, __getLightAverage_return
+5	127	23	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	128	23		mov __D0flashChecking, __D0getLightAverage
+5	127	25	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	128	25		numtostr __strretvalflashChecking, __D0flashChecking
+5	127	28	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	128	28		mov __ArrHelper__flashChecking_244_1, __strretvalflashChecking
+5	127	30	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	128	30		strcat __strbufflashChecking, __constStr0015
+5	127	34	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	128	34		mov __ArrHelper__flashChecking_244_2, __strbufflashChecking
+5	127	36	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	128	36		strcat __strbufflashChecking, __ArrHelper__flashChecking_244_1, __ArrHelper__flashChecking_244_2
+5	127	41	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	128	41		mov __ArrHelper__flashChecking_244_1, __strbufflashChecking
+5	127	43	#line 127 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	128	43		strcat __strbufflashChecking, __ArrHelper__flashChecking_244_0, __ArrHelper__flashChecking_244_1
+5	128	48	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	129	48		acquire __TextOutMutex
+5	128	49	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	129	49		mov __TextOutArgs.Location.X, __signed_stack_001flashChecking
+5	128	51	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	129	51		mov __TextOutArgs.Location.Y, __signed_stack_002flashChecking
+5	128	53	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	129	53		set __TextOutArgs.Options, 0
+5	128	56	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	129	56		mov __TextOutArgs.Text, __strbufflashChecking
+5	128	58	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	129	58		syscall 13, __TextOutArgs
+5	128	61	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	129	61		mov __D0flashChecking, __TextOutArgs.Result
+5	128	63	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	129	63		release __TextOutMutex
+5	128	64	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	128	64	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	129	64		subcall getLightAverage, __getLightAverage_return
+5	128	66	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	129	66		mov __signed_stack_001flashChecking, __D0getLightAverage
+5	128	68	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	128	68	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	129	68		set __D0flashChecking, 65
+5	128	71	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	129	71		cmp 3, __zfflashChecking, __signed_stack_001flashChecking, __D0flashChecking
+5	128	75	#line 128 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	129	75		mov __D0flashChecking, __zfflashChecking
+5	129	77	#line 129 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	130	77		brtst 4, __NXC_Label_705, __zfflashChecking
+5	129	80	#line 129 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	130	80	#pragma macro 25
+5	130	80		acquire __RemoteMutex
+5	130	81		mov __SRSTmpBuf, __DCMessageWritePacket
+5	130	83		replace __SRSTmpBuf, __SRSTmpBuf, __constVal2, __constVal3
+5	130	88		replace __SRSTmpBuf, __SRSTmpBuf, __constVal3, __constVal5
+5	130	93		mov __SRSTmpLongVal, __constVal1
+5	130	95		flatten __SRSFlattenBuf, __SRSTmpLongVal
+5	130	98		arrbuild __SRSSendBuf, __SRSTmpBuf, __SRSFlattenBuf
+5	130	103		brcmp 0, __ConnWrite_Else0, __constVal0, __constVal4
+5	130	107		acquire __CHSWMutex
+5	130	108		sub __WFRRTmpByte, __constVal0, __constVal4
+5	130	112		arrbuild __CHSWArgs.Buffer, __WFRRTmpByte, __SRSSendBuf
+5	130	117		syscall 37, __CHSWArgs
+5	130	120		mov __D0flashChecking, __CHSWArgs.Status
+5	130	122		release __CHSWMutex
+5	130	123		jmp __ConnWrite_EndIf0
+5	130	125		acquire __CBTWMutex
+5	130	126		mov __CBTWArgs.Connection, __constVal0
+5	130	128		mov __CBTWArgs.Buffer, __SRSSendBuf
+5	130	130		syscall 29, __CBTWArgs
+5	130	133		mov __D0flashChecking, __CBTWArgs.Result
+5	130	135		release __CBTWMutex
+5	130	136		release __RemoteMutex
+5	7568	137	#line 7568 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	129	137	#line 129 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	129	137	#line 129 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	131	137	#line 131 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	132	137		subcall resetSamples, __resetSamples_return
+5	131	139	#line 131 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	131	139	#line 131 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	131	139	#line 131 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	7921	139	#line 7921 "NXCDefs.h"
+5	7922	139		wait 250
+5	7921	141	#line 7921 "NXCDefs.h"
+5	132	141	#line 132 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	134	141	#line 134 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	139	141	#line 139 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	140	141		jmp __NXC_Label_693
+5	139	143	#line 139 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+5	140	143		exit -1, -1
+6	141	0	#line 141 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	142	0		set __resetSamples_7qG2_i_7qG2_000, 0
+6	141	3	#line 141 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	141	3	#line 141 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	142	3		mov __signed_stack_001resetSamples, __resetSamples_7qG2_i_7qG2_000
+6	141	5	#line 141 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	141	5	#line 141 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	142	5		set __D0resetSamples, 10
+6	141	8	#line 141 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	142	8		cmp 0, __zfresetSamples, __signed_stack_001resetSamples, __D0resetSamples
+6	141	12	#line 141 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	142	12		mov __D0resetSamples, __zfresetSamples
+6	141	14	#line 141 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	142	14		brtst 4, __NXC_Label_709, __zfresetSamples
+6	141	17	#line 141 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	142	17		jmp __NXC_Label_710
+6	142	19	#line 142 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	143	19		add __resetSamples_7qG2_i_7qG2_000, __resetSamples_7qG2_i_7qG2_000, __constVal1
+6	142	23	#line 142 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	143	23		jmp __NXC_Label_708
+6	142	25	#line 142 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	143	25		mov __signed_stack_001resetSamples, __resetSamples_7qG2_i_7qG2_000
+6	142	27	#line 142 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	143	27	#line 143 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	144	27		mov __D0resetSamples, regular_brightness
+6	143	29	#line 143 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	144	29		replace light_samples, light_samples, __signed_stack_001resetSamples, __D0resetSamples
+6	143	34	#line 143 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	143	34	#line 143 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	144	34		jmp __NXC_Label_711
+6	143	36	#line 143 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	144	36	#line 144 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	145	36		set next, 0
+6	144	39	#line 144 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	144	39	#line 144 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	146	39	#line 146 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+6	147	39		subret __resetSamples_return
+7	147	0	#line 147 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	148	0		mov __signed_stack_001sampleLight, next
+7	147	2	#line 147 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	147	2	#line 147 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	148	2		getin __D0sampleLight, __constVal0, 4
+7	147	6	#line 147 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	148	6		replace light_samples, light_samples, __signed_stack_001sampleLight, __D0sampleLight
+7	147	11	#line 147 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	147	11	#line 147 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	148	11	#line 148 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	148	11	#line 148 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	148	11	#line 148 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	148	11	#line 148 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	149	11		add __signed_stack_001sampleLight, next, __constVal1
+7	148	15	#line 148 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	149	15	#line 149 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	149	15	#line 149 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	150	15		mod next, __signed_stack_001sampleLight, __constVal10
+7	149	19	#line 149 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	149	19	#line 149 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	152	19	#line 152 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+7	153	19		subret __sampleLight_return
+8	155	0	#line 155 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	156	0		set __getLightAverage_7qG2_total_7qG2_000, 0
+8	155	3	#line 155 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	156	3	#line 156 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	157	3		set __getLightAverage_7qG2_divisor_7qG2_000, 0
+8	156	6	#line 156 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	158	6	#line 158 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	159	6		mov __getLightAverage_7qG2_position_7qG2_000, next
+8	158	8	#line 158 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	158	8	#line 158 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	159	8		set __getLightAverage_7qG2_i_7qG2_000, 1
+8	158	11	#line 158 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	158	11	#line 158 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	159	11		mov __signed_stack_001getLightAverage, __getLightAverage_7qG2_i_7qG2_000
+8	158	13	#line 158 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	158	13	#line 158 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	159	13		set __D0getLightAverage, 10
+8	158	16	#line 158 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	159	16		cmp 2, __zfgetLightAverage, __signed_stack_001getLightAverage, __D0getLightAverage
+8	158	20	#line 158 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	159	20		mov __D0getLightAverage, __zfgetLightAverage
+8	158	22	#line 158 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	159	22		brtst 4, __NXC_Label_737, __zfgetLightAverage
+8	158	25	#line 158 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	159	25		jmp __NXC_Label_738
+8	158	27	#line 158 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	159	27		add __getLightAverage_7qG2_i_7qG2_000, __getLightAverage_7qG2_i_7qG2_000, __constVal1
+8	159	31	#line 159 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	160	31		jmp __NXC_Label_736
+8	160	33	#line 160 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	160	33	#line 160 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	161	33		add __getLightAverage_7qG2_divisor_7qG2_000, __getLightAverage_7qG2_divisor_7qG2_000, __getLightAverage_7qG2_i_7qG2_000
+8	160	37	#line 160 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	160	37	#line 160 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	161	37		mov __signed_stack_001getLightAverage, __getLightAverage_7qG2_position_7qG2_000
+8	160	39	#line 160 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	160	39	#line 160 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	161	39		index __ArrHelper__getLightAverage_73_0, light_samples, __signed_stack_001getLightAverage
+8	160	43	#line 160 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	160	43	#line 160 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	161	43	#line 161 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	161	43	#line 161 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	162	43		mul __D0getLightAverage, __ArrHelper__getLightAverage_73_0, __getLightAverage_7qG2_i_7qG2_000
+8	161	47	#line 161 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	162	47		add __getLightAverage_7qG2_total_7qG2_000, __getLightAverage_7qG2_total_7qG2_000, __D0getLightAverage
+8	161	51	#line 161 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	161	51	#line 161 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	161	51	#line 161 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	161	51	#line 161 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	161	51	#line 161 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	162	51		add __signed_stack_001getLightAverage, __getLightAverage_7qG2_position_7qG2_000, __constVal1
+8	161	55	#line 161 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	162	55	#line 162 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	162	55	#line 162 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	163	55		mod __getLightAverage_7qG2_position_7qG2_000, __signed_stack_001getLightAverage, __constVal10
+8	162	59	#line 162 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	162	59	#line 162 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	164	59	#line 164 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	165	59		jmp __NXC_Label_739
+8	164	61	#line 164 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	164	61	#line 164 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	164	61	#line 164 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	165	61	#line 165 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	165	61	#line 165 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	166	61		div __D0getLightAverage, __getLightAverage_7qG2_total_7qG2_000, __getLightAverage_7qG2_divisor_7qG2_000
+8	165	65	#line 165 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	166	65		subret __getLightAverage_return
+8	165	67	#line 165 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	168	67	#line 168 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+8	169	67		subret __getLightAverage_return
+9	169	0	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	170	0		arrinit light_samples, __constVal0, __constVal10
+9	169	4	#line 169 "C:\Users\P\AppData\Local\Temp\temp.nxc"
+9	170	4		subret ____initialize_global_data_return
+#CLUMPS
+Clump	Name	Offset	File
+0	main	0	C:\Users\P\AppData\Local\Temp\temp.nxc
+1	__ResetSensorSubroutine	64	NXTDefs.h
+2	checkBT	77	C:\Users\P\AppData\Local\Temp\temp.nxc
+3	bumperChecking	132	C:\Users\P\AppData\Local\Temp\temp.nxc
+4	readBumpers	546	C:\Users\P\AppData\Local\Temp\temp.nxc
+5	flashChecking	611	C:\Users\P\AppData\Local\Temp\temp.nxc
+6	resetSamples	757	C:\Users\P\AppData\Local\Temp\temp.nxc
+7	sampleLight	798	C:\Users\P\AppData\Local\Temp\temp.nxc
+8	getLightAverage	819	C:\Users\P\AppData\Local\Temp\temp.nxc
+9	__initialize_global_data	888	C:\Users\P\AppData\Local\Temp\temp.nxc

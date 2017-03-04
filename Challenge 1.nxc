@@ -1,0 +1,194 @@
+//Daniel Beraun
+//Phil Adriaan
+//Challenge 1
+
+//Global variables
+
+//Boolean whether right or left bump is hit
+bool right_bump = false;
+bool left_bump = false;
+
+//Number between 0 to pivot is right bias.
+//Number between pivot and 19 is left bias.
+int pivot = 9;
+
+//Total bias accumulated
+int total_bias = 20;
+
+//Mutex to hold control of the motor in case of bump
+mutex engineMutex;
+
+//Current direction, 0 for right and 1 for left
+int direction = 0;
+
+//Time left to receive new random direction
+int wait_time = 0;
+
+//How long to back up in case of bump
+int back_time = 1000;
+
+//Rotate tires with varying speed
+void rotate(int a, int b)
+{
+ int spin_time = Random(500) + 250;
+ OnFwd(OUT_A, a);
+ OnFwd(OUT_B, b);
+ Wait(spin_time);
+}
+
+//Runs when at least one bumper touched
+void bumped()
+{
+ OnRev(OUT_A, 50);
+ OnRev(OUT_B, 50);
+   //Both right bump and left bump touched
+  //Makes a sound
+  //Backs up for 1 second
+  //Randomly turn left or right
+  if (right_bump == true && left_bump == true)
+  {
+   //Plays a repeating tone when backing up.
+   for (int i = 0; i < 4; i++)
+   {
+    PlayTone(1, back_time / 8);
+    Wait(back_time / 4);
+   }
+
+   int random_number = Random(2);
+   if (random_number == 0)
+   {
+    rotate(50, -50);
+   }
+   else
+   {
+    rotate(-50, 50);;
+   }
+  }
+  //Right bumper is touched
+  //Backs up for 1 second
+  //Turns left with a random degree
+  else if (right_bump == true)
+  {
+   Wait(back_time);
+   rotate(50, -50);
+   right_bump = false;
+  }
+  //Left bumper is touched
+  //Backs up for 1 second
+  //Turns right with a random degree
+  else if (left_bump == true)
+  {
+   Wait(back_time);
+   rotate(-50, 50);
+  }
+  left_bump = false;
+  right_bump = false;
+}
+
+//Wandering algorithm
+void wander()
+{
+  //No bumper is touched
+  //Biased random walk is implemented using a random number between 0 to 19.
+  //If random number is below pivot, it goes right and pivot
+  //and vice versa.
+  int random_speed = Random(50);
+   if(wait_time == 0)
+   {
+    int random_number = Random(total_bias);
+    wait_time = Random(10) + 1;
+    if(random_number < pivot)
+    {
+     direction = 0;
+     if (pivot > 0)
+     {
+      pivot--;
+     }
+    }
+    else if(random_number > pivot)
+    {
+     direction = 1;
+     if (pivot < total_bias - 1)
+     {
+      pivot++;
+     }
+    }
+    else
+    {
+     direction = 3;
+    }
+   }
+   //Direction is going right
+   //Decrements wait time
+   if(direction == 0)
+   {
+    OnFwd(OUT_A, 50 + random_speed);
+    OnFwd(OUT_B, 100);
+   }
+   //Direction is going left
+   //Decrements wait time
+   else if(direction == 1)
+   {
+    OnFwd(OUT_A, 100);
+    OnFwd(OUT_B, 50 + random_speed);
+   }
+   else
+   {
+    OnFwd(OUT_A, 100);
+    OnFwd(OUT_B, 100);
+   }
+   //Each unit of wait time correspond to 1 millisecond
+   wait_time--;
+   Wait(1);
+}
+
+//Moves the robot according to behaviors.
+task move()
+{
+ while(true)
+ {
+  Acquire(engineMutex);
+  //Something hit the touch sensor
+  if (right_bump == true || left_bump == true)
+  {
+   bumped();
+  }
+  //Nothing hit the touch sensor
+  else
+  {
+   wander();
+  }
+  Release(engineMutex);
+  //Loops every 100 milliseconds to wait for detection for the last 100
+  //milliseconds.
+  Wait(100);
+ }
+}
+
+//Detects whether left or right bump are touched and sets the correct variable.
+task detection()
+{
+ while(true)
+ {
+ Acquire(engineMutex);
+  //Right bump is touched.
+  if (SENSOR_2 == 1)
+  {
+   right_bump = true;
+  }
+  //Left bump is touched.
+  if (SENSOR_3 == 1)
+  {
+   left_bump = true;
+  }
+  Release(engineMutex);
+ }
+}
+
+//Sets the sensor and run the tasks.
+task main()
+{
+ SetSensor(IN_2, SENSOR_TOUCH);
+ SetSensor(IN_3, SENSOR_TOUCH);
+ Precedes(move, detection);
+}

@@ -1,0 +1,601 @@
+//the constant for the minute used by CurrentTick()
+#define ONE_MINUTE MIN_1
+
+//state dependent on energy level
+#define SATISFIED 0
+#define HUNGRY 1
+#define DANGER 2
+#define DEAD 3
+
+//behaviors
+#define SLEEP 1
+#define WANDER 2
+#define FEED 3
+#define APPROACH 4
+#define ESCAPE 5
+#define BUMP 6
+
+//bluetooth
+#define BT_LINE        1
+#define BUMPER_INBOX   2
+#define FLASH_INBOX    3
+#define OUTBOX         5
+
+//constants for the bumpers and light flash from the slave brick
+#define BUMPER_HIT_LEFT   1
+#define BUMPER_HIT_RIGHT  2
+#define BUMPER_HIT_BOTH   3
+#define FLASH_DETECTED 1
+
+//The normal motor speed commonly used
+#define TYP_SPEED 35
+
+//These constants are used in object approach/sonar detection
+#define TOP_SPEED 60
+#define MIN_SPEED 5
+
+//Sonar value corresponding to ~1"
+#define SENSOR_NEAR 5
+//Sonar value corresponding to ~3'
+#define SENSOR_FAR 100
+
+//light reading threshold for white values
+#define THRESHOLD 40
+
+//light sensor values
+int leftValue;
+int rightValue;
+int feed_delay = 1000;
+
+//distance recorded by sonar, initial value larger than SENSOR_FAR
+int distance = 100;
+//adjusted coefficient from min/max distance
+int coefficient;
+int kp;
+//Time left to turn
+int turn_time = 0;
+//Time left to escape
+int escape_time = 0;
+
+//the statuses from the slave brick
+int flash_status = 0;
+int bumper_status = 0;
+int bumper = 0;
+bool flash = false;
+
+//used by escape, minute timer is for the scared states
+//and the boolean will start the thread
+long minute_timer = 0;
+bool start_habituation = false;
+int scared_state = 0;
+
+//set initial values
+int state = SATISFIED;
+int behavior = WANDER;
+int energy_level = 24000;
+bool decrease = true;
+
+//the wander
+int dir = 0;
+int wndr_cnt = 0;
+
+//Time left to receive new random direction
+int wait_time = 0;
+
+//How long to back up in case of bump
+int back_time = 1000;
+
+/**
+* Used by the behavior ESCAPE to turn and run away
+* @param mot The motor speeds
+* @param spin_time the time for spinning
+* @param run_time the time for running away
+*/
+sub turnAndRun(int mot, int spin_time, int run_time) {
+   dir = Random(2) - 1;
+   while (spin_time > 0 && behavior != BUMP) {
+
+      if (dir) {
+         OnFwd(OUT_B, mot);
+         OnRev(OUT_A, mot);
+      } else {
+         OnFwd(OUT_A, mot);
+         OnRev(OUT_B, mot);
+      }
+      Wait(10);
+      spin_time--;
+   }
+
+   while (run_time > 0 && behavior != BUMP) {
+      OnFwd(OUT_B, mot);
+      OnFwd(OUT_A, mot);
+      Wait(10);
+      run_time--;
+   }
+   behavior = WANDER;
+}
+
+/**
+* Used by the behavior BUMP and APPROACH to back up and spin away
+* @param mot The motor speeds
+* @param back_time the time for backing up
+* @param spin_time the time for spinning around
+*/
+sub backAndSpin(int mot, int back_time, int spin_time) {
+   if (behavior == BUMP) {
+      PlayFileEx("Ouch 02.rso", 4, 0);
+   }
+   while (back_time > 0) {
+      OnRev(OUT_B, mot);
+      OnRev(OUT_A, mot);
+      Wait(10);
+      back_time--;
+   }
+   if (bumper == BUMPER_HIT_BOTH) {
+      bumper = Random(2) - 1;
+   }
+   while (spin_time > 0) {
+      TextOut(20,LCD_LINE4,"status:" + NumToStr(bumper));
+      if (bumper == BUMPER_HIT_RIGHT) {
+         OnFwd(OUT_B, -mot);
+         OnFwd(OUT_A, mot);
+      } else {
+         OnFwd(OUT_B, mot);
+         OnFwd(OUT_A, -mot);
+      }
+      Wait(2);
+      spin_time--;
+   }
+}
+
+/**
+* Approaches an object when it senses something in front of it 3 feet away.
+* The robot will back and turn once it reaches within 1 inch.
+*/
+sub approach() {
+   decrease = true;
+   if (distance <= SENSOR_NEAR *3) {
+      OnFwd(OUT_A, 0);
+      OnFwd(OUT_B, 0);
+      backAndSpin(100, 40, Random(10) + 50);
+      behavior = WANDER;
+   } else if (distance < SENSOR_FAR){
+      int offset = 100  * (distance - SENSOR_NEAR) / (SENSOR_FAR - SENSOR_NEAR);
+      if (offset < 30)
+         offset = 30;
+      OnFwdReg(OUT_A, offset, OUT_REGMODE_SYNC);
+      OnFwdReg(OUT_B, offset, OUT_REGMODE_SYNC);
+
+      if(bumper_status == BUMPER_HIT_LEFT) {
+      TextOut(20,LCD_LINE3,"left: " + NumToStr(bumper_status));
+      //TextOut(5,LCD_LINE2,"Flash: " + NumToStr(flash_status));
+      bumper = BUMPER_HIT_LEFT;
+      behavior = BUMP;
+   } else if(bumper_status == BUMPER_HIT_RIGHT) {
+      TextOut(20,LCD_LINE3, "right: " + NumToStr(bumper_status));
+      bumper = BUMPER_HIT_RIGHT;
+      behavior = BUMP;
+   } else if(bumper_status == BUMPER_HIT_BOTH) {
+      TextOut(20,LCD_LINE3,"both: " + NumToStr(bumper_status));
+      bumper = BUMPER_HIT_BOTH;
+      behavior = BUMP;
+   } else if (state == SATISFIED || state == HUNGRY) {
+      if(flash){
+         if (behavior <= ESCAPE){
+            behavior = ESCAPE;
+         }
+      }
+     }
+   } else if (distance > SENSOR_FAR){
+      behavior = WANDER;
+   }
+   Wait(10);
+}
+
+/**
+* Wanders by choosing a random direction.
+*/
+sub wander() {
+   decrease = true;
+   TextOut(10,LCD_LINE1,"wander");
+   //NumOut(10,LCD_LINE2,energy_level);
+   dir = Random(2) - 1;
+
+   turn_time = 0;
+   if(wndr_cnt){
+      wndr_cnt--;
+   } else {
+      wndr_cnt = Random(150) + 150;
+      if(dir){
+         dir = 0;
+         OnFwd(OUT_B, TYP_SPEED + 10 + Random(10));
+         OnFwd(OUT_A, TYP_SPEED - 5 + Random(10));
+      } else{
+         dir = 1;
+         OnFwd(OUT_B, TYP_SPEED - 5 + Random(10));
+         OnFwd(OUT_A, TYP_SPEED + 10 + Random(10));
+      }
+   }
+
+   if(bumper_status == BUMPER_HIT_LEFT) {
+      TextOut(20,LCD_LINE3,"left: " + NumToStr(bumper_status));
+      //TextOut(5,LCD_LINE2,"Flash: " + NumToStr(flash_status));
+      bumper = BUMPER_HIT_LEFT;
+      behavior = BUMP;
+   } else if(bumper_status == BUMPER_HIT_RIGHT) {
+      TextOut(20,LCD_LINE3, "right: " + NumToStr(bumper_status));
+      bumper = BUMPER_HIT_RIGHT;
+      behavior = BUMP;
+   } else if(bumper_status == BUMPER_HIT_BOTH) {
+      TextOut(20,LCD_LINE3,"both: " + NumToStr(bumper_status));
+      bumper = BUMPER_HIT_BOTH;
+      behavior = BUMP;
+   } else if (state == SATISFIED || state == HUNGRY) {
+      if(flash){
+         if (behavior <= ESCAPE){
+            behavior = ESCAPE;
+         }
+      } else if(distance <= SENSOR_FAR){
+         if (behavior <= APPROACH)
+         behavior = APPROACH;
+      }
+   }
+   if (state == HUNGRY || state == DANGER) {
+      if (leftValue > THRESHOLD || rightValue > THRESHOLD) {
+         if (behavior <= FEED)//if (state == HUNGRY && behavior <= FEED || state == DANGER && state != BUMP)
+            behavior = FEED;
+      }
+   }
+}
+
+/**
+* The robot begins to feed and recover its
+* energy level when both light sensors are on the patch.
+* Starts to feed only when it is HUNGRY or in DANGER.
+*/
+sub feed() {
+   if (leftValue < THRESHOLD && rightValue < THRESHOLD){
+      wndr_cnt = 0;
+      feed_delay = 1000;
+      OnRev(OUT_B, 100);
+      OnFwd(OUT_A, 100);
+   } else if (leftValue < THRESHOLD) {
+      decrease = true;
+      wndr_cnt = 0;
+      feed_delay = 1000;
+      OnFwd(OUT_B, 100);
+      OnFwd(OUT_A, 0);
+   } else if (rightValue < THRESHOLD) {
+      decrease = true;
+      wndr_cnt = 0;
+      feed_delay = 1000;
+      OnFwd(OUT_B, 0);
+      OnFwd(OUT_A, 100);
+   } else {
+      if(wndr_cnt){
+         wndr_cnt--;
+      } else {
+         int dir = Random(2);
+         wndr_cnt = Random(150) + 150;
+         if(dir){
+            OnFwd(OUT_B, 35 + Random(10));
+            OnFwd(OUT_A, 25 + Random(10));
+         } else{
+            OnFwd(OUT_B, 25 + Random(10));
+            OnFwd(OUT_A, 35 + Random(10));
+         }
+      }
+      if (feed_delay > 0) {
+         feed_delay -= 10;
+      } else {
+         PlayTone(1, 1);
+         decrease = false;
+      }
+   }
+   if(bumper_status == BUMPER_HIT_LEFT) {
+      TextOut(20,LCD_LINE3,"left: " + NumToStr(bumper_status));
+      bumper = BUMPER_HIT_LEFT;
+      behavior = BUMP;
+   } else if(bumper_status == BUMPER_HIT_RIGHT) {
+      TextOut(20,LCD_LINE3, "right: " + NumToStr(bumper_status));
+      bumper = BUMPER_HIT_RIGHT;
+      behavior = BUMP;
+   } else if(bumper_status == BUMPER_HIT_BOTH) {
+      TextOut(20,LCD_LINE3,"both: " + NumToStr(bumper_status));
+      bumper = BUMPER_HIT_BOTH;
+      behavior = BUMP;
+   } else if (state == SATISFIED || state == HUNGRY) {
+      if(flash){
+         if (behavior <= ESCAPE){
+            behavior = ESCAPE;
+         }
+      } else if(distance <= SENSOR_FAR){
+         if (behavior <= APPROACH)
+         behavior = APPROACH;
+      }
+   }
+}
+
+/**
+* When the robot bumps, it will turn depending on which sensor is hit.
+* Left if the right sensor, right if the left sensor, and a random direction if
+* both sensors were hit.
+*/
+sub bump() {
+   decrease = true;
+   backAndSpin(100, Random(20) + 20, Random(10) + 20);
+   bumper_status = 0;
+   behavior = WANDER;
+}
+
+/**
+* The robot becomes scared when a light is flashed on the robot. It slowly
+* becomes immune when more and more light flashes the robot. It will gradually
+* become scared when each minute passes.
+*/
+sub escape() {
+   decrease = true;
+   if (scared_state != 4) {
+      PlayFileEx("scream.rso", 4, 0);
+   } else {
+      PlayFileEx("MS_sfx_evil lau.rso", 4, 0);
+   }
+   start_habituation = true; //start the thread
+
+   if (CurrentTick() - minute_timer > ONE_MINUTE) { //need the timer to reset if a minute has passed
+      minute_timer = CurrentTick();
+   }
+
+   //go into a scared state depending on the state set (multiple light flashes)
+   switch(scared_state) {
+   case 0: //very fast
+      turnAndRun(100, 90, 150);
+      break;
+   case 1: //fast
+      turnAndRun(80, 100, 150);
+      break;
+   case 2: //medium
+      turnAndRun(60, 170, 220);
+      break;
+   case 3: //slow
+      turnAndRun(40, 300, 370);
+      break;
+   case 4: //stop
+      //do nothing
+      break;
+   }
+   if (scared_state < 4) {
+      scared_state++;
+   }
+   flash = false;
+   behavior = WANDER;
+}
+
+/**
+* The robot uses the CurrentTick() method to count a minute whenever a light is flashed.
+* It will reset this timer every time a light is flashed unless it is fully immune.
+*/
+task habituation() {
+   while (true) {
+      if (start_habituation) {
+         //starts the timer
+         if (minute_timer == 0) {
+            minute_timer = CurrentTick();
+         }
+         //if a minute is up, gradually recover immunity
+         if (CurrentTick() - minute_timer > ONE_MINUTE) { //if immunity - time for minute
+            TextOut(20,LCD_LINE6,"increase state");
+            if(scared_state > 0) {
+               scared_state--;
+            }
+            minute_timer = CurrentTick(); //resets the timer for a min (after a minute is done, decrease the state)
+         }
+      }
+   }
+}
+
+/**
+* Reads and stores sonar data.
+*/
+task getSonarData() {
+   //Scaling coefficient for object detection
+   coefficient = 100 / (SENSOR_FAR - SENSOR_NEAR);
+
+   while(true) {
+      //A simple moving average filter (xn+1 = 75%xn + 25%IN)
+      distance = SensorUS(IN_3) / 4 + 3 * distance / 4;
+      Wait(10);
+   }
+}
+
+/**
+* Gets corresponding behavior value sent from the slave brick.
+*/
+task getSlaveBehaviors() {
+   while (true) {
+      ReceiveRemoteNumber(BUMPER_INBOX, true, bumper_status);
+      ReceiveRemoteNumber(FLASH_INBOX, true, flash_status);
+
+      if(flash_status == FLASH_DETECTED) {
+         if (state == SATISFIED || state == HUNGRY) {
+            if (behavior <= ESCAPE) {
+               flash = true;
+               behavior = ESCAPE;
+            }
+         }
+      }
+
+      if(bumper_status == BUMPER_HIT_LEFT) {
+         TextOut(20,LCD_LINE3,"left: " + NumToStr(bumper_status));
+         bumper = BUMPER_HIT_LEFT;
+         behavior = BUMP;
+      } else if(bumper_status == BUMPER_HIT_RIGHT) {
+         TextOut(20,LCD_LINE3, "right: " + NumToStr(bumper_status));
+         bumper = BUMPER_HIT_RIGHT;
+         behavior = BUMP;
+      } else if(bumper_status == BUMPER_HIT_BOTH) {
+         TextOut(20,LCD_LINE3,"both: " + NumToStr(bumper_status));
+         bumper = BUMPER_HIT_BOTH;
+         behavior = BUMP;
+      }
+      Wait(20);
+   }
+}
+
+/**
+* Filters the light data that is being read in.
+*/
+int filterLightData(int data[], int index) {
+   int weight = 1;
+   int i = index + 1;
+   int sum = 0;
+   int counter = 10;
+   while (counter > 0) {
+      sum += (data[index] * weight);
+      weight++;
+      i = (i + 1) % 10;
+      counter--;
+   }
+   return sum/55;
+}
+
+/**
+* Gets the light data from the filtered data.
+*/
+task getLightData() {
+   int dataLeft[10];
+   int dataRight[10];
+   int index = 0;
+   while (true) {
+      dataLeft[index] = SensorValue(IN_1);
+      dataRight[index] = SensorValue(IN_2);
+
+      leftValue = filterLightData(dataLeft, index);
+      rightValue = filterLightData(dataRight, index);
+
+      index = (index + 1) % 10;
+   }
+}
+
+/**
+* Modifies the energy level depending on which behavior it is executing.
+* The energy will always decrease if it isn't feeding. It will increase only
+* when it is feeding. The sounds are located here to show what state it is in.
+*/
+task modifyEnergy() {
+  while (true) {
+    TextOut(5, LCD_LINE6, "behavior: " + NumToStr(behavior));
+    TextOut(10, LCD_LINE7, NumToStr(energy_level));
+    if (decrease) {
+      if (energy_level == 24000) {
+        PlayFileEx("MS__voice_IFee.rso", 4, 0);
+      }
+      if (energy_level == 12000) { //hungry  //12000
+        state = HUNGRY;
+        PlayFileEx("MS__voice_I'm H.rso", 4, 0);
+        TextOut(20,LCD_LINE3,"state: hungry");
+      }
+      if (energy_level == 6000)  { //danger
+        state = DANGER;
+        PlayFileEx("MS__voice_Dange.rso", 4, 0);
+        TextOut(20,LCD_LINE3,"state: danger");
+      }
+      if (energy_level == 0) { //dead
+        state = DEAD;
+        PlayFileEx("Ahnoo.rso", 4, 0);
+        TextOut(20,LCD_LINE3,"state: dead");
+      }
+      Wait(4);
+      energy_level--;
+    } else {
+        if (energy_level >= 24000) { //when increasing, must reach full
+          state = SATISFIED;
+          PlayFileEx("MS__voice_I Fee.rso", 4, 0);
+          TextOut(20,LCD_LINE3,"state: satisfied");
+          decrease = true;
+          behavior = WANDER;
+        }
+        if (energy_level >= 6000 && energy_level <= 12000) {
+          state = HUNGRY;
+        }
+      energy_level+=2;
+      Wait(4);
+    }
+  }
+}
+
+/**
+* The main task that runs to determine which state
+* it should be in and behavior it should execute within that state.
+*/
+task stateMachine() {
+   while (true) {
+      switch(state) {
+      case SATISFIED:
+         if (behavior == WANDER) {
+            wander();
+         }
+         else if (behavior == APPROACH) {
+            approach();
+         }
+         else if (behavior == BUMP) {
+            bump();
+         }
+         else if (behavior == ESCAPE) {
+            escape();
+         }
+         break;
+      case HUNGRY:
+         if (behavior == WANDER) {
+            wander();
+         }
+         else if (behavior == APPROACH) {
+            approach();
+         }
+         else if (behavior == BUMP) {
+            bump();
+         }
+         else if (behavior == ESCAPE) {
+            escape();
+         }
+         else if (behavior == FEED) {
+            feed();
+         }
+         break;
+      case DANGER:
+         if (behavior == WANDER) {
+            wander();
+         }
+         else if (behavior == BUMP) {
+            bump();
+         }
+         else if (behavior == FEED) {
+            feed();
+         }
+         else {
+            behavior = WANDER;
+         }
+         break;
+      case DEAD:
+         //make a sound
+         OnFwd(OUT_A, 0);
+         OnFwd(OUT_B, 0);
+         behavior = -1;
+         break;
+      }
+   }
+}
+
+/**
+* Set up the sensors, and run all the tasks.
+*/
+task main() {
+   SetSensorLight(IN_1);
+   SetSensorLight(IN_2);
+   SetSensorUltrasonic(IN_3);
+   SetSensorTouch(IN_4);
+   Precedes(stateMachine, modifyEnergy, habituation, getSonarData, getSlaveBehaviors);
+   Precedes(getLightData);
+}
+
+
